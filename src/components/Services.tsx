@@ -9,23 +9,23 @@ import campaignImage from "@/assets/campaign-management.jpg";
 const services = [
   {
     icon: Plane,
-    title: "Aircraft Exterior Advertising",
-    description: "Transform aircraft into flying billboards with premium exterior wraps that capture attention from ground to sky.",
-    features: ["360° Brand Visibility", "Weather-Resistant Materials", "Compliance Certified", "Global Coverage"],
+    title: "Aircraft Exterior Branding",
+    description: "Full and partial aircraft wraps on domestic carriers flying from Hyderabad to major Indian cities.",
+    features: ["IndiGo, SpiceJet, Air India Partners", "DGCA Compliant Materials", "7-Day Express Installation", "Pan-India Route Coverage"],
     image: exteriorImage,
   },
   {
     icon: Home,
-    title: "In-Flight Interior Branding",
-    description: "Create immersive brand experiences inside premium cabins with strategic touchpoint placement.",
-    features: ["First-Class Positioning", "Passenger Engagement", "Multi-Channel Integration", "Luxury Association"],
+    title: "In-Cabin Advertising",
+    description: "Premium interior placements including seat backs, overhead bins, and tray tables on Hyderabad routes.",
+    features: ["High Dwell Time", "Captive Audience", "Business Traveler Focus", "Cost-Effective Reach"],
     image: interiorImage,
   },
   {
     icon: TrendingUp,
-    title: "Full Campaign Management",
-    description: "End-to-end orchestration from creative concept to performance analytics and optimization.",
-    features: ["Strategy Development", "Creative Excellence", "ROI Tracking", "Continuous Optimization"],
+    title: "Turnkey Campaign Solutions",
+    description: "Complete service from design to installation with dedicated account management and weekly performance reports.",
+    features: ["Free Design & Mockups", "Installation Management", "Real-Time Flight Tracking", "ROI Analytics Dashboard"],
     image: campaignImage,
   },
 ];
@@ -49,12 +49,12 @@ export const Services = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-foreground mb-4">
-            ELEVATE BEYOND ORDINARY
+            DOMINATE THE SKIES
             <br />
-            <span className="text-gradient-sky">ADVERTISING</span>
+            <span className="text-gradient-sky">ABOVE HYDERABAD</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Three distinct pathways to sky-high brand visibility
+            Three powerful advertising solutions for India's domestic aviation market
           </p>
         </motion.div>
 

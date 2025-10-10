@@ -24,8 +24,8 @@ export const Footer = () => {
               <span className="text-3xl font-display font-black">SKYLAR</span>
             </motion.div>
             <p className="text-white/70 max-w-md mb-6">
-              Elevating brands to new heights through premium aircraft advertising. 
-              Where luxury travel meets luxury branding.
+              Hyderabad's premier aircraft advertising agency. Connecting your brand with India's 
+              most influential travelers through strategic aircraft placements at RGIA.
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 rounded-full bg-white/10 hover:bg-accent transition-colors flex items-center justify-center">
@@ -81,8 +81,8 @@ export const Footer = () => {
             <h3 className="font-display font-bold text-lg mb-4">Get in Touch</h3>
             <ul className="space-y-2 text-white/70">
               <li>contact@skylar.aero</li>
-              <li>+1 (555) SKY-HIGH</li>
-              <li>New York, NY 10001</li>
+              <li>+91 9876 543 210</li>
+              <li>Hyderabad, Telangana 500081</li>
               <li>
                 <a href="#contact" className="text-accent hover:text-accent-glow transition-colors">
                   Request a Quote →
@@ -93,7 +93,7 @@ export const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-white/10 text-center text-white/50 text-sm">
-          <p>© {currentYear} Skylar Aircraft Advertising. All rights reserved. Where brands take flight.</p>
+          <p>© {currentYear} Skylar Aircraft Advertising. All rights reserved. Proudly serving Hyderabad & India.</p>
         </div>
       </div>
     </footer>

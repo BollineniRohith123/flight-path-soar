@@ -6,21 +6,21 @@ import { useEffect, useState } from "react";
 const stats = [
   {
     icon: Eye,
-    value: 2800000,
+    value: 450000,
     suffix: "+",
-    label: "Eyes Reached Daily",
+    label: "Daily Passenger Reach",
   },
   {
     icon: Plane,
-    value: 500,
+    value: 180,
     suffix: "+",
-    label: "Aircraft Campaigns",
+    label: "Daily Flights (Hyderabad)",
   },
   {
     icon: Globe,
-    value: 150,
+    value: 65,
     suffix: "+",
-    label: "Countries Covered",
+    label: "Domestic Destinations",
   },
 ];
 
@@ -77,12 +77,12 @@ export const Statistics = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-display font-black text-white mb-4">
-            SKY-HIGH
+            HYDERABAD AIRPORT
             <br />
-            <span className="text-gradient-gold">IMPACT</span>
+            <span className="text-gradient-gold">BY THE NUMBERS</span>
           </h2>
           <p className="text-xl text-white/80 max-w-2xl mx-auto">
-            Numbers that speak louder than words
+            Unmatched reach across India's fastest-growing aviation hub
           </p>
         </motion.div>
 
@@ -118,7 +118,7 @@ export const Statistics = () => {
           className="mt-16 text-center"
         >
           <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-            Every campaign reaches millions of travelers across continents, creating lasting brand impressions at altitudes where your competitors can't follow.
+            Hyderabad Airport: India's 6th busiest with 25+ million annual passengers. Your brand reaches premium travelers flying to Mumbai, Delhi, Bangalore, and 60+ domestic destinations daily.
           </p>
         </motion.div>
       </div>

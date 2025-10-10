@@ -8,37 +8,37 @@ import case3 from "@/assets/case-study-3.jpg";
 
 const caseStudies = [
   {
-    title: "Netflix Global Launch Campaign",
-    category: "Entertainment",
-    description: "Transformed 50 aircraft into flying Netflix billboards across major international routes, generating 45M impressions in 90 days.",
+    title: "TechCorp India - IT Services",
+    category: "B2B Technology",
+    description: "3-month campaign on Hyderabad-Bangalore-Mumbai routes generated 850K+ impressions and 340% increase in enterprise leads.",
     metrics: [
-      { label: "Impressions", value: "45M+" },
-      { label: "Routes", value: "120" },
-      { label: "ROI", value: "340%" },
+      { label: "Impressions", value: "850K+" },
+      { label: "Lead Growth", value: "+340%" },
+      { label: "ROI", value: "485%" },
     ],
     image: case1,
     color: "from-red-500 to-red-700",
   },
   {
-    title: "Emirates Co-Branding Excellence",
-    category: "Luxury Travel",
-    description: "Premium partnership showcasing dual-brand power on flagship A380 fleet, elevating both brands through strategic alliance.",
+    title: "Skyline Estates - Premium Real Estate",
+    category: "Real Estate",
+    description: "Full aircraft wrap campaign targeting Hyderabad's luxury property market resulted in ₹180 Cr in sales within 6 months.",
     metrics: [
-      { label: "Reach", value: "28M+" },
-      { label: "Markets", value: "65" },
-      { label: "Engagement", value: "+185%" },
+      { label: "Sales Value", value: "₹180Cr" },
+      { label: "Site Visits", value: "+520%" },
+      { label: "Duration", value: "6 months" },
     ],
     image: case2,
     color: "from-amber-500 to-orange-600",
   },
   {
-    title: "Tourism Board Seasonal Push",
-    category: "Destination Marketing",
-    description: "Seasonal aircraft wraps promoting tropical destinations during peak winter travel, driving record tourism numbers.",
+    title: "GourmetHub - Restaurant Chain",
+    category: "Hospitality",
+    description: "Seasonal campaign during festival season drove massive footfall to 12 locations across Telangana and AP.",
     metrics: [
-      { label: "Bookings", value: "+220%" },
-      { label: "Duration", value: "6 months" },
-      { label: "Coverage", value: "Global" },
+      { label: "Footfall", value: "+280%" },
+      { label: "Bookings", value: "15K+" },
+      { label: "Revenue", value: "+195%" },
     ],
     image: case3,
     color: "from-cyan-500 to-blue-600",
@@ -61,12 +61,12 @@ export const CaseStudies = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-foreground mb-4">
-            CAMPAIGNS THAT
+            SUCCESS STORIES FROM
             <br />
-            <span className="text-gradient-sky">SOAR</span>
+            <span className="text-gradient-sky">HYDERABAD</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Real results from brands that trusted us to elevate their visibility
+            Real businesses, real results, real growth across India
           </p>
         </motion.div>
 
@@ -126,9 +126,9 @@ export const CaseStudies = () => {
           className="mt-12 text-center"
         >
           <p className="text-lg text-muted-foreground italic">
-            "Skylar transformed our brand visibility from ground-level to global phenomenon."
+            "The reach we got from Hyderabad airport advertising exceeded our wildest expectations. Skylar's team made it effortless."
             <br />
-            <span className="text-foreground font-semibold">— Chief Marketing Officer, Fortune 500 Company</span>
+            <span className="text-foreground font-semibold">— Marketing Director, Leading Indian Brand</span>
           </p>
         </motion.div>
       </div>

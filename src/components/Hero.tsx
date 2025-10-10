@@ -59,10 +59,10 @@ export const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            WHERE BRANDS
+            HYDERABAD'S
             <br />
             <span className="text-gradient-sky inline-block bg-clip-text text-transparent bg-gradient-to-r from-primary-light via-white to-accent">
-              TAKE FLIGHT
+              PREMIER AIRCRAFT ADVERTISING
             </span>
           </motion.h1>
 
@@ -72,7 +72,7 @@ export const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Premium Aircraft Advertising That Reaches Every Sky
+            India's Most Impactful Advertising Platform - Exclusively at Hyderabad Airport
           </motion.p>
 
           <motion.div
