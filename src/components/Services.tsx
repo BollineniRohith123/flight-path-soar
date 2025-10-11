@@ -10,22 +10,22 @@ const services = [
   {
     icon: Plane,
     title: "Aircraft Exterior Branding",
-    description: "Full and partial aircraft wraps on domestic carriers flying from Hyderabad to major Indian cities.",
-    features: ["IndiGo, SpiceJet, Air India Partners", "DGCA Compliant Materials", "7-Day Express Installation", "Pan-India Route Coverage"],
+    description: "Complete 360° aircraft wraps on domestic carriers. Your brand soars across India with maximum visibility and premium positioning.",
+    features: ["Complete Aircraft Wraps", "DGCA Compliant Materials", "7-Day Express Installation", "Pan-India Route Coverage"],
     image: exteriorImage,
   },
   {
     icon: Home,
-    title: "In-Cabin Advertising",
-    description: "Premium interior placements including seat backs, overhead bins, and tray tables on Hyderabad routes.",
-    features: ["High Dwell Time", "Captive Audience", "Business Traveler Focus", "Cost-Effective Reach"],
+    title: "Aircraft Interior Branding",
+    description: "Dominate passenger attention with overhead bins, skyline panels, meal trays, headrest covers, and seat back branding.",
+    features: ["100% Captive Audience", "2.5 Hour Dwell Time", "Multiple Touchpoints", "Premium Traveler Focus"],
     image: interiorImage,
   },
   {
     icon: TrendingUp,
-    title: "Turnkey Campaign Solutions",
-    description: "Complete service from design to installation with dedicated account management and weekly performance reports.",
-    features: ["Free Design & Mockups", "Installation Management", "Real-Time Flight Tracking", "ROI Analytics Dashboard"],
+    title: "Complete Advertising Solutions",
+    description: "From airport ground services to outdoor hoardings, digital campaigns to print media - we are The House of Advertising.",
+    features: ["360° Campaign Management", "ATL & BTL Activities", "Digital & Traditional Media", "End-to-End Execution"],
     image: campaignImage,
   },
 ];
@@ -49,12 +49,12 @@ export const Services = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-foreground mb-4">
-            DOMINATE THE SKIES
+            THE HOUSE OF ADVERTISING
             <br />
-            <span className="text-gradient-sky">ABOVE HYDERABAD</span>
+            <span className="text-gradient-sky">COMPLETE MARKETING SOLUTIONS</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Three powerful advertising solutions for India's domestic aviation market
+            Aircraft branding, outdoor media, digital campaigns & full-service advertising solutions
           </p>
         </motion.div>
 

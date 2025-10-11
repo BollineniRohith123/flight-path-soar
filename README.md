@@ -1,73 +1,105 @@
-# Welcome to your Lovable project
+# Skylar - The House of Advertising
 
-## Project info
+India's premier comprehensive advertising solutions provider, specializing in aircraft branding, outdoor media, digital campaigns, and integrated marketing across all channels.
 
-**URL**: https://lovable.dev/projects/a8aa636f-f688-41ad-9c13-ff4131838161
+## About Skylar
 
-## How can I edit this code?
+Skylar is "The House of Advertising" - your complete marketing partner offering end-to-end advertising solutions:
 
-There are several ways of editing your application.
+### Core Services
+- **Aircraft Advertising**: Complete exterior wraps, interior branding, and ground services at Hyderabad Airport
+- **Outdoor Media**: Unipoles, hoardings, bus shelters, and transit advertising
+- **Digital Campaigns**: LED billboards, interactive kiosks, and social media marketing
+- **Traditional Media**: TV, radio, print, and direct mail campaigns
+- **Campaign Management**: Full-service ATL/BTL strategy, creative, and execution
+- **Production**: In-house printing, installation, and maintenance capabilities
 
-**Use Lovable**
+### Key Features
+- **Hyderabad Expertise**: Premier aircraft advertising at RGIA with exclusive partnerships
+- **Integrated Solutions**: One-stop shop for all advertising needs
+- **Premium Quality**: DGCA-compliant materials and professional execution
+- **Data-Driven Results**: Real-time tracking and ROI measurement
+- **7-Day Installation**: Industry-leading turnaround times
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a8aa636f-f688-41ad-9c13-ff4131838161) and start prompting.
+## Technology Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Frontend**: React 18 + TypeScript + Vite
+- **Styling**: Tailwind CSS + Shadcn UI components
+- **Animations**: Framer Motion
+- **Routing**: React Router v6
+- **Build Tool**: Vite with SWC
+- **Deployment**: Ready for static hosting (Netlify, Vercel, etc.)
 
-**Use your preferred IDE**
+## Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
+- Node.js 18+ and npm installed
+- Git for version control
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Installation
 
-Follow these steps:
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd flight-path-soar
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+4. **Open your browser**
+   Navigate to `http://localhost:8080`
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+### Build for Production
+
+```bash
+npm run build
 ```
 
-**Edit a file directly in GitHub**
+The built files will be in the `dist/` directory, ready for deployment.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Project Structure
 
-**Use GitHub Codespaces**
+```
+src/
+├── components/          # Reusable UI components
+│   ├── ui/             # Shadcn UI components
+│   ├── Hero.tsx        # Landing section with video background
+│   ├── Services.tsx    # Homepage service preview
+│   ├── Navbar.tsx      # Navigation component
+│   └── ...
+├── pages/              # Page components
+│   ├── Index.tsx       # Homepage
+│   ├── ServicesPage.tsx # Detailed services
+│   ├── AboutPage.tsx   # Company information
+│   └── ...
+├── assets/             # Images and media files
+├── lib/                # Utility functions
+└── hooks/              # Custom React hooks
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Key Features
 
-## What technologies are used for this project?
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **Video Background**: Optimized aircraft branding video with fallback
+- **Interactive Components**: Contact forms, ROI calculator, testimonials
+- **SEO Optimized**: Meta tags, structured data, and performance optimized
+- **Accessibility**: WCAG compliant with keyboard navigation and screen reader support
 
-This project is built with:
+## Contact
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+**Skylar - The House of Advertising**
+- Email: contact@skylar.aero
+- Phone: +91 9876 543 210
+- Address: Hyderabad, Telangana 500081
 
-## How can I deploy this project?
+## License
 
-Simply open [Lovable](https://lovable.dev/projects/a8aa636f-f688-41ad-9c13-ff4131838161) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+This project is proprietary to Skylar Advertising Solutions.

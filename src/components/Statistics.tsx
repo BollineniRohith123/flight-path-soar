@@ -24,6 +24,24 @@ const stats = [
   },
 ];
 
+const campaignStats = [
+  {
+    value: 500,
+    suffix: "+",
+    label: "Campaigns Delivered",
+  },
+  {
+    value: 50,
+    suffix: "M+",
+    label: "Total Impressions",
+  },
+  {
+    value: 200,
+    suffix: "+",
+    label: "Happy Clients",
+  },
+];
+
 const CountUp = ({ end, duration = 2000, inView }: { end: number; duration?: number; inView: boolean }) => {
   const [count, setCount] = useState(0);
 
@@ -111,10 +129,44 @@ export const Statistics = () => {
           ))}
         </div>
 
+        {/* Campaign Performance Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.8 }}
+          className="mt-20"
+        >
+          <h3 className="text-3xl md:text-4xl font-display font-black text-white text-center mb-12">
+            OUR <span className="text-gradient-gold">TRACK RECORD</span>
+          </h3>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {campaignStats.map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: 1 + index * 0.15 }}
+                className="glass-effect p-8 rounded-xl border border-accent/20 hover:border-accent/40 transition-all text-center group hover:scale-105"
+              >
+                <div className="text-5xl md:text-6xl font-display font-black mb-2">
+                  <span className="text-gradient-gold">
+                    <CountUp end={stat.value} inView={inView} />
+                    {stat.suffix}
+                  </span>
+                </div>
+                <p className="text-lg text-white/80 font-medium">
+                  {stat.label}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 1.5 }}
           className="mt-16 text-center"
         >
           <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">

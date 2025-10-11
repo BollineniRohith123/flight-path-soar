@@ -24,8 +24,8 @@ export const Footer = () => {
               <span className="text-3xl font-display font-black">SKYLAR</span>
             </motion.div>
             <p className="text-white/70 max-w-md mb-6">
-              Hyderabad's premier aircraft advertising agency. Connecting your brand with India's 
-              most influential travelers through strategic aircraft placements at RGIA.
+              The House of Advertising - Your complete marketing partner for aircraft branding, outdoor media, 
+              digital campaigns, and integrated advertising solutions across all channels.
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 rounded-full bg-white/10 hover:bg-accent transition-colors flex items-center justify-center">
@@ -55,22 +55,22 @@ export const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a href="#services" className="text-white/70 hover:text-accent transition-colors">
-                  Exterior Advertising
+                  Aircraft Advertising
                 </a>
               </li>
               <li>
                 <a href="#services" className="text-white/70 hover:text-accent transition-colors">
-                  Interior Branding
+                  Outdoor Media
                 </a>
               </li>
               <li>
                 <a href="#services" className="text-white/70 hover:text-accent transition-colors">
-                  Campaign Management
+                  Digital Campaigns
                 </a>
               </li>
               <li>
-                <a href="#case-studies" className="text-white/70 hover:text-accent transition-colors">
-                  Case Studies
+                <a href="#services" className="text-white/70 hover:text-accent transition-colors">
+                  Full-Service Production
                 </a>
               </li>
             </ul>
@@ -93,7 +93,7 @@ export const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-white/10 text-center text-white/50 text-sm">
-          <p>© {currentYear} Skylar Aircraft Advertising. All rights reserved. Proudly serving Hyderabad & India.</p>
+          <p>© {currentYear} Skylar - The House of Advertising. All rights reserved. Complete marketing solutions across all channels.</p>
         </div>
       </div>
     </footer>
