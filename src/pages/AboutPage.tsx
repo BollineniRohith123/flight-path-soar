@@ -35,37 +35,36 @@ const AboutPage = () => {
     },
   ];
 
-  const milestones = [
-    { year: "2018", event: "Skylar Founded in Hyderabad", description: "Started with aircraft advertising expertise at Hyderabad Airport" },
-    { year: "2019", event: "Outdoor Media Expansion", description: "Added unipoles, hoardings, and transit advertising to service portfolio" },
-    { year: "2020", event: "Digital Integration", description: "Launched digital advertising and social media campaign services" },
-    { year: "2021", event: "Full-Service Capabilities", description: "Expanded to include TV, radio, press, and traditional media buying" },
-    { year: "2022", event: "Production Division Launch", description: "Established in-house printing, installation, and maintenance capabilities" },
-    { year: "2023", event: "The House of Advertising", description: "Rebranded as comprehensive marketing solutions provider" },
-    { year: "2024", event: "Campaign Management Excellence", description: "Became full-service agency offering ATL/BTL strategy and execution" },
-    { year: "2025", event: "Integrated Solutions Leader", description: "Managing 100+ multi-channel campaigns with measurable ROI" },
+  const timeline = [
+    { year: "2013", event: "Founded", description: "Skylar launched to specialize in aircraft advertising, offering premium aircraft exterior and interior branding services." },
+    { year: "2015", event: "Regional Expansion", description: "Expanded operations across South India and began strategic partnerships with domestic carriers and airport operators." },
+    { year: "2018", event: "Service Diversification", description: "Added full-service ATL & BTL capabilities — production, outdoor hoardings, transit media and campaign planning." },
+    { year: "2020", event: "Digital Integration", description: "Integrated digital OOH and programmatic buying into our offerings to deliver targeted multi-channel campaigns." },
+    { year: "2022", event: "National Rollout", description: "Scaled to pan‑India operations with national installation teams and an expanded client success group." },
+    { year: "2024", event: "Campaign Management Excellence", description: "Delivered measureable ROI across multi-channel campaigns and established advanced measurement frameworks for clients." },
+    { year: "2025", event: "Integrated Solutions Leader", description: "Positioned as a leading integrated advertising partner offering aircraft, outdoor, digital and traditional solutions with end-to-end performance tracking." },
   ];
 
   const team = [
     {
       name: "Rajesh Kumar",
       role: "Founder & CEO",
-      description: "15+ years in aviation marketing and outdoor advertising",
+      description: "15+ years in aviation marketing and outdoor advertising — strategic lead and industry connector.",
     },
     {
       name: "Priya Sharma",
       role: "Creative Director",
-      description: "Award-winning designer with expertise in large-format branding",
+      description: "Award-winning creative lead specializing in large-format branding and campaign design.",
     },
     {
       name: "Amit Patel",
       role: "Operations Head",
-      description: "Former airline operations manager with deep industry connections",
+      description: "Ex-airline operations manager ensuring fast, compliant installations and flawless delivery.",
     },
     {
       name: "Sneha Reddy",
       role: "Client Success Manager",
-      description: "Dedicated to ensuring every campaign exceeds expectations",
+      description: "Dedicated to client outcomes and campaign performance — your single point of contact.",
     },
   ];
 
@@ -107,24 +106,15 @@ const AboutPage = () => {
             </h2>
             <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground">
               <p className="text-lg leading-relaxed">
-                Founded in 2018, <span className="text-primary font-bold">Skylar</span> began as a specialized aircraft advertising agency 
-                and evolved into <span className="font-bold text-primary">The House of Advertising</span> - a comprehensive marketing solutions provider.
+                Founded in <span className="text-primary font-bold">2013</span>, Skylar began with a focused mission: bring premium aircraft advertising to brands seeking high-impact, captive-audience placements. Over the years we've grown from a niche provider into <span className="font-bold text-primary">The House of Advertising</span>, delivering integrated campaigns that combine aircraft branding with outdoor, transit and digital channels.
               </p>
+
               <p className="text-lg leading-relaxed">
-                Based in Hyderabad, we offer a complete spectrum of advertising services: from aircraft exterior and interior branding 
-                to outdoor media (unipoles, hoardings, transit advertising), digital campaigns, traditional media (TV, radio, press), 
-                and full-service campaign management with production capabilities.
+                Our evolution follows a deliberate roadmap — regional expansion, service diversification, and technology integration — driven by strategic partnerships and a commitment to measurable outcomes. We combine creative production, compliant installations, and data-driven media planning to ensure every campaign performs.
               </p>
+
               <p className="text-lg leading-relaxed">
-                Today, we're proud to be your <span className="font-bold text-primary">one-stop advertising partner</span>, 
-                offering integrated ATL and BTL solutions across all media channels. Our comprehensive approach ensures brand consistency 
-                and maximum impact across every touchpoint.
-              </p>
-              <p className="text-lg leading-relaxed">
-                Our success is built on three pillars: <span className="font-semibold">Premium Quality Execution</span>, 
-                <span className="font-semibold"> Strategic Media Planning</span>, and 
-                <span className="font-semibold"> Measurable ROI Delivery</span>. Every campaign is treated as a 
-                partnership where your brand's success is our success.
+                Today, Skylar operates nationally with dedicated teams for installation, production, analytics, and client success. We focus on ROI-first campaigns, clear reporting, and premium execution across every channel — from the sky to the street and into digital ecosystems.
               </p>
             </div>
           </motion.div>
@@ -224,7 +214,7 @@ const AboutPage = () => {
           </motion.div>
 
           <div className="max-w-4xl mx-auto">
-            {milestones.map((milestone, index) => (
+            {timeline.map((milestone, index) => (
               <motion.div
                 key={milestone.year}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
@@ -290,9 +280,9 @@ const AboutPage = () => {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             {[
-              { number: "7+", label: "Years of Excellence" },
-              { number: "100+", label: "Active Campaigns" },
-              { number: "15M+", label: "Monthly Reach" },
+              { number: "Since 2013", label: "Years of Excellence" },
+              { number: "500+", label: "Campaigns Delivered" },
+              { number: "50M+", label: "Total Impressions" },
               { number: "95%", label: "Client Retention" },
             ].map((stat, index) => (
               <motion.div
@@ -301,9 +291,7 @@ const AboutPage = () => {
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <div className="text-5xl md:text-6xl font-display font-black mb-2 text-accent">
-                  {stat.number}
-                </div>
+                <div className="text-5xl md:text-6xl font-display font-black mb-2 text-accent">{stat.number}</div>
                 <div className="text-lg font-semibold">{stat.label}</div>
               </motion.div>
             ))}

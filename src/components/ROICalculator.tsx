@@ -207,7 +207,7 @@ export const ROICalculator = () => {
   };
 
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
+    <section id="roi" className="py-24 bg-background relative overflow-hidden">
       {/* Premium background with animated gradients */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
       <div className="absolute inset-0">
