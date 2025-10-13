@@ -564,40 +564,42 @@ export const ROICalculator = () => {
                           {campaignDuration} {campaignDuration === 1 ? 'month' : 'months'}
                         </motion.span>
                       </div>
-                      <div className="relative mt-4">
-                        <div className="relative group">
-                          {/* Custom Calendar Slider */}
-                          <div className="relative h-3 w-full bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300 rounded-full overflow-hidden shadow-inner">
-                            <motion.div 
-                              className="absolute h-full bg-gradient-to-r from-primary to-primary-light rounded-full"
+                      <div className="relative px-2">
+                        {/* Simplified Mobile Slider */}
+                        <input
+                          type="range"
+                          min="1"
+                          max="12"
+                          step="1"
+                          value={campaignDuration}
+                          onChange={(e) => setCampaignDuration(parseInt(e.target.value))}
+                          className="w-full h-12 appearance-none bg-transparent cursor-pointer touch-manipulation"
+                          style={{
+                            WebkitAppearance: 'none',
+                          }}
+                        />
+                        <div className="absolute top-0 left-2 right-2 h-12 flex items-center pointer-events-none">
+                          <div className="w-full h-3 bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300 rounded-full shadow-inner">
+                            <div 
+                              className="h-full bg-gradient-to-r from-primary to-primary-light rounded-full transition-all duration-200 relative"
                               style={{ width: `${((campaignDuration - 1) / 11) * 100}%` }}
-                              transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                            />
-                          </div>
-                          <input
-                            type="range"
-                            min="1"
-                            max="12"
-                            step="1"
-                            value={campaignDuration}
-                            onChange={(e) => setCampaignDuration(parseInt(e.target.value))}
-                            className="absolute inset-0 w-full opacity-0 cursor-grab active:cursor-grabbing z-20"
-                          />
-                          {/* Draggable Calendar Icon */}
-                          <div
-                            className="absolute top-1/2 pointer-events-none z-10"
-                            style={{
-                              left: `${((campaignDuration - 1) / 11) * 100}%`,
-                              transform: 'translate(-50%, -50%)'
-                            }}
-                          >
-                            <div className="w-10 h-10 bg-white rounded-xl shadow-lg border-2 border-blue-400 flex items-center justify-center">
-                              <Calendar className="w-5 h-5 text-blue-600" />
+                            >
+                              {/* Draggable Calendar Icon */}
+                              <div
+                                className="absolute top-1/2 right-0 pointer-events-none"
+                                style={{
+                                  transform: 'translate(50%, -50%)'
+                                }}
+                              >
+                                <div className="w-11 h-11 bg-white rounded-xl shadow-xl border-4 border-blue-500 flex items-center justify-center">
+                                  <Calendar className="w-5 h-5 text-blue-600" />
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div className="flex justify-between text-xs text-muted-foreground mt-2">
+                      <div className="flex justify-between text-xs text-muted-foreground px-2">
                         <span>1 month</span>
                         <span>12 months</span>
                       </div>
@@ -619,40 +621,42 @@ export const ROICalculator = () => {
                           ₹{(totalBudget/100000).toFixed(1)}L
                         </motion.span>
                       </div>
-                      <div className="relative mt-4">
-                        <div className="relative group">
-                          {/* Custom Rocket Slider */}
-                          <div className="relative h-3 w-full bg-gradient-to-r from-green-100 via-emerald-200 to-green-300 rounded-full overflow-hidden shadow-inner">
-                            <motion.div 
-                              className="absolute h-full bg-gradient-to-r from-emerald-400 via-green-500 to-emerald-600 rounded-full"
+                      <div className="relative px-2">
+                        {/* Simplified Mobile Slider */}
+                        <input
+                          type="range"
+                          min="100000"
+                          max="5000000"
+                          step="50000"
+                          value={totalBudget}
+                          onChange={(e) => setTotalBudget(parseInt(e.target.value))}
+                          className="w-full h-12 appearance-none bg-transparent cursor-pointer touch-manipulation"
+                          style={{
+                            WebkitAppearance: 'none',
+                          }}
+                        />
+                        <div className="absolute top-0 left-2 right-2 h-12 flex items-center pointer-events-none">
+                          <div className="w-full h-3 bg-gradient-to-r from-green-100 via-emerald-200 to-green-300 rounded-full shadow-inner">
+                            <div 
+                              className="h-full bg-gradient-to-r from-emerald-400 via-green-500 to-emerald-600 rounded-full transition-all duration-200 relative"
                               style={{ width: `${((totalBudget - 100000) / 4900000) * 100}%` }}
-                              transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                            />
-                          </div>
-                          <input
-                            type="range"
-                            min="100000"
-                            max="5000000"
-                            step="50000"
-                            value={totalBudget}
-                            onChange={(e) => setTotalBudget(parseInt(e.target.value))}
-                            className="absolute inset-0 w-full opacity-0 cursor-grab active:cursor-grabbing z-20"
-                          />
-                          {/* Draggable Rocket Icon */}
-                          <div
-                            className="absolute top-1/2 pointer-events-none z-10"
-                            style={{
-                              left: `${((totalBudget - 100000) / 4900000) * 100}%`,
-                              transform: 'translate(-50%, -50%)'
-                            }}
-                          >
-                            <div className="w-10 h-10 bg-white rounded-xl shadow-lg border-2 border-emerald-400 flex items-center justify-center">
-                              <Rocket className="w-5 h-5 text-emerald-600" />
+                            >
+                              {/* Draggable Rocket Icon */}
+                              <div
+                                className="absolute top-1/2 right-0 pointer-events-none"
+                                style={{
+                                  transform: 'translate(50%, -50%)'
+                                }}
+                              >
+                                <div className="w-11 h-11 bg-white rounded-xl shadow-xl border-4 border-orange-500 flex items-center justify-center">
+                                  <Rocket className="w-5 h-5 text-orange-600" />
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div className="flex justify-between text-xs text-muted-foreground mt-2">
+                      <div className="flex justify-between text-xs text-muted-foreground px-2">
                         <span>₹1L</span>
                         <span>₹50L</span>
                       </div>
@@ -697,35 +701,35 @@ export const ROICalculator = () => {
                                   {allocation}%
                                 </span>
                               </div>
-                              <div className="relative mt-2">
-                                <div className="relative group">
-                                  {/* Custom Service Slider with Icon */}
-                                  <div className="relative h-3 w-full bg-gradient-to-r from-purple-100 via-purple-200 to-purple-300 rounded-full overflow-hidden shadow-inner">
-                                    <motion.div 
-                                      className="absolute h-full bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 rounded-full"
+                              <div className="relative px-1">
+                                {/* Simplified Mobile-Friendly Slider */}
+                                <input
+                                  type="range"
+                                  min="0"
+                                  max="100"
+                                  step="5"
+                                  value={allocation}
+                                  onChange={(e) => handleAllocationChange(service.id, parseInt(e.target.value))}
+                                  className="w-full h-10 appearance-none bg-transparent cursor-pointer touch-manipulation"
+                                  style={{ WebkitAppearance: 'none' }}
+                                />
+                                <div className="absolute top-0 left-1 right-1 h-10 flex items-center pointer-events-none">
+                                  <div className="w-full h-2.5 bg-gradient-to-r from-purple-100 via-purple-200 to-purple-300 rounded-full shadow-inner">
+                                    <div 
+                                      className="h-full bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 rounded-full transition-all duration-200 relative"
                                       style={{ width: `${allocation}%` }}
-                                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                                    />
-                                  </div>
-                                  <input
-                                    type="range"
-                                    min="0"
-                                    max="100"
-                                    step="5"
-                                    value={allocation}
-                                    onChange={(e) => handleAllocationChange(service.id, parseInt(e.target.value))}
-                                    className="absolute inset-0 w-full opacity-0 cursor-grab active:cursor-grabbing z-20"
-                                  />
-                                  {/* Draggable Service Icon */}
-                                  <div
-                                    className="absolute top-1/2 pointer-events-none z-10"
-                                    style={{
-                                      left: `${allocation}%`,
-                                      transform: 'translate(-50%, -50%)'
-                                    }}
-                                  >
-                                    <div className="w-10 h-10 bg-white rounded-full shadow-lg border-2 border-purple-400 flex items-center justify-center">
-                                      <Icon className="w-5 h-5 text-purple-600" />
+                                    >
+                                      {/* Draggable Service Icon */}
+                                      <div
+                                        className="absolute top-1/2 right-0 pointer-events-none"
+                                        style={{
+                                          transform: 'translate(50%, -50%)'
+                                        }}
+                                      >
+                                        <div className="w-11 h-11 bg-white rounded-full shadow-xl border-4 border-purple-500 flex items-center justify-center">
+                                          <Icon className="w-5 h-5 text-purple-600" />
+                                        </div>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
