@@ -549,80 +549,47 @@ export const ROICalculator = () => {
 
 
                     <div className="space-y-2">
-                      <div className="flex items-center justify-between gap-2 mb-2">
+                      <div className="flex items-center justify-between gap-2 mb-3">
                         <div className="flex items-center gap-1.5">
                           <Calendar className="w-4 h-4 text-primary shrink-0" />
                           <span className="text-sm font-semibold">Duration</span>
                         </div>
                         <motion.span 
-                          className="text-primary font-black text-base whitespace-nowrap"
+                          className="text-primary font-black text-lg whitespace-nowrap"
                           key={campaignDuration}
                           initial={{ scale: 1.3, color: "hsl(209 100% 60%)" }}
                           animate={{ scale: 1, color: "hsl(209 100% 40%)" }}
                           transition={{ type: "spring", stiffness: 300 }}
                         >
-                          {campaignDuration} mo
+                          {campaignDuration} {campaignDuration === 1 ? 'month' : 'months'}
                         </motion.span>
                       </div>
-                      <div className="relative mt-4">
-                        <div className="relative group">
-                          {/* Custom Calendar Slider */}
-                          <div className="relative h-3 w-full bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300 rounded-full overflow-hidden shadow-inner">
-                            <motion.div 
-                              className="absolute h-full bg-gradient-to-r from-primary to-primary-light rounded-full"
+                      <div className="relative px-2">
+                        {/* Simplified Mobile Slider */}
+                        <input
+                          type="range"
+                          min="1"
+                          max="12"
+                          step="1"
+                          value={campaignDuration}
+                          onChange={(e) => setCampaignDuration(parseInt(e.target.value))}
+                          className="w-full h-12 appearance-none bg-transparent cursor-pointer touch-manipulation"
+                          style={{
+                            WebkitAppearance: 'none',
+                          }}
+                        />
+                        <div className="absolute top-0 left-2 right-2 h-12 flex items-center pointer-events-none">
+                          <div className="w-full h-3 bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300 rounded-full shadow-inner">
+                            <div 
+                              className="h-full bg-gradient-to-r from-primary to-primary-light rounded-full transition-all duration-200"
                               style={{ width: `${((campaignDuration - 1) / 11) * 100}%` }}
-                              transition={{ type: "spring", stiffness: 300, damping: 30 }}
                             />
-                          </div>
-                          <input
-                            type="range"
-                            min="1"
-                            max="12"
-                            step="1"
-                            value={campaignDuration}
-                            onChange={(e) => setCampaignDuration(parseInt(e.target.value))}
-                            className="absolute inset-0 w-full opacity-0 cursor-grab active:cursor-grabbing z-20"
-                          />
-                          {/* Draggable Calendar Icon */}
-                          <div
-                            className="absolute top-1/2 pointer-events-none z-10"
-                            style={{
-                              left: `${((campaignDuration - 1) / 11) * 100}%`,
-                              transform: 'translate(-50%, -50%)'
-                            }}
-                          >
-                            <motion.div
-                              className="relative"
-                              animate={{ 
-                                rotate: [0, -10, 10, 0],
-                                scale: [1, 1.15, 1]
-                              }}
-                              transition={{ 
-                                duration: 0.5,
-                                ease: "easeInOut"
-                              }}
-                              key={campaignDuration}
-                            >
-                              <div className="w-10 h-10 bg-white rounded-xl shadow-2xl border-2 border-blue-400 flex items-center justify-center transform hover:scale-110 transition-transform">
-                                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <rect x="3" y="6" width="18" height="15" rx="2" fill="#3B82F6"/>
-                                  <path d="M3 10h18" stroke="white" strokeWidth="2"/>
-                                  <rect x="7" y="3" width="2" height="6" rx="1" fill="#EF4444"/>
-                                  <rect x="15" y="3" width="2" height="6" rx="1" fill="#EF4444"/>
-                                  <circle cx="8" cy="14" r="1" fill="#FCD34D"/>
-                                  <circle cx="12" cy="14" r="1" fill="#FCD34D"/>
-                                  <circle cx="16" cy="14" r="1" fill="#FCD34D"/>
-                                  <circle cx="8" cy="17" r="1" fill="#34D399"/>
-                                  <circle cx="12" cy="17" r="1" fill="#34D399"/>
-                                </svg>
-                              </div>
-                            </motion.div>
                           </div>
                         </div>
                       </div>
-                      <div className="flex justify-between text-[10px] text-muted-foreground mt-2 px-1">
-                        <span>1mo</span>
-                        <span>12mo</span>
+                      <div className="flex justify-between text-xs text-muted-foreground px-2">
+                        <span>1 month</span>
+                        <span>12 months</span>
                       </div>
                     </div>
 
