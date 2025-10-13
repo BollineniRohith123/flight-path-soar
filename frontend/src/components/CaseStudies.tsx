@@ -58,14 +58,14 @@ export const CaseStudies = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-16 px-4"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-black text-foreground mb-4">
             SUCCESS STORIES FROM
             <br />
             <span className="text-gradient-sky">HYDERABAD</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
             Real businesses, real results, real growth across India
           </p>
         </motion.div>
