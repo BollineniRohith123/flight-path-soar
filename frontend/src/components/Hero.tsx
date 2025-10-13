@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useRef, useEffect } from "react";
-import heroImage from "@/assets/hero-aircraft-cinematic-golden-hour.jpg";
+import heroImage from "@/assets/indian-aircraft-hero-1.jpg";
 
 export const Hero = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
