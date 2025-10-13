@@ -84,10 +84,10 @@ export const Statistics = () => {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.15 }}
             >
-              <div className="text-4xl md:text-5xl font-display font-black text-foreground mb-2">
+              <div className="text-3xl sm:text-4xl md:text-5xl font-display font-black text-foreground mb-2">
                 {s.value >= 1000000 ? `${(s.value/1000000).toFixed(1)}M` : s.value}{s.suffix}
               </div>
-              <div className="text-sm text-muted-foreground uppercase tracking-wide">{s.label}</div>
+              <div className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wide">{s.label}</div>
             </motion.div>
           ))}
         </div>
