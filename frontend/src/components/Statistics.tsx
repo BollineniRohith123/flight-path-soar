@@ -76,7 +76,7 @@ export const Statistics = () => {
   return (
     <section className="py-20 bg-transparent" ref={ref}>
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-6 text-center">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 text-center">
           {campaignStats.map((s, i) => (
             <motion.div
               key={s.label}
