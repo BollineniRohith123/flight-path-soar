@@ -13,6 +13,14 @@ import { Link } from "react-router-dom";
 import exteriorWrapImage from "@/assets/exterior-aircraft-wrap-three-quarter.jpg";
 import interiorCabinImage from "@/assets/interior-aircraft-branding-wide-cabin.jpg";
 import airportGroundImage from "@/assets/airport-ground-services-tarmac-focus.jpg";
+import heroBackgroundImage from "@/assets/hero-aircraft-cinematic-golden-hour.jpg";
+import outdoorMediaImage from "@/assets/outdoor-media-unipoles-dusk.jpg";
+import transitBusImage from "@/assets/transit-bus-branding-side-profile.jpg";
+import digitalLedImage from "@/assets/digital-led-billboards-night-dynamic.jpg";
+import traditionalMediaImage from "@/assets/traditional-media-tv-studio-wide.jpg";
+import campaignManagementImage from "@/assets/campaign-management.jpg";
+import productionFacilityImage from "@/assets/production-facility-team-in-action.jpg";
+import ctaBackgroundImage from "@/assets/integrated-advertising-hero-golden-hour.jpg";
 
 const services = [
   {
@@ -91,6 +99,7 @@ const additionalServices = [
   {
     icon: Building2,
     category: "Outdoor Advertising",
+    image: outdoorMediaImage,
     services: [
       "Unipoles - Strategic Single-Pole Displays",
       "Hoardings & Billboard Advertising",
@@ -105,6 +114,7 @@ const additionalServices = [
   {
     icon: Bus,
     category: "Transit & Transportation",
+    image: transitBusImage,
     services: [
       "Bus Branding - Complete Wraps",
       "Railway Platform Advertising",
@@ -119,6 +129,7 @@ const additionalServices = [
   {
     icon: Monitor,
     category: "Digital & Interactive",
+    image: digitalLedImage,
     services: [
       "LED Screen Advertising",
       "Digital Billboards",
@@ -133,6 +144,7 @@ const additionalServices = [
   {
     icon: Newspaper,
     category: "Traditional Media",
+    image: traditionalMediaImage,
     services: [
       "TV Commercial Production",
       "Radio Advertising",
@@ -147,6 +159,7 @@ const additionalServices = [
   {
     icon: TrendingUp,
     category: "Campaign Management",
+    image: campaignManagementImage,
     services: [
       "ATL (Above The Line) Activities",
       "BTL (Below The Line) Campaigns",
@@ -161,6 +174,7 @@ const additionalServices = [
   {
     icon: Radio,
     category: "Production & Support",
+    image: productionFacilityImage,
     services: [
       "Creative Design Services",
       "Large Format Printing",
@@ -186,7 +200,9 @@ const ServicesPage = () => {
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-gradient-to-b from-primary-dark to-background overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/clouds-background.jpg')] opacity-10 bg-cover bg-center" />
+        <div className="absolute inset-0 opacity-20 bg-cover bg-center">
+          <img src={heroBackgroundImage} alt="Aircraft" className="w-full h-full object-cover" />
+        </div>
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -326,30 +342,43 @@ const ServicesPage = () => {
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="p-6 hover:shadow-xl transition-all hover:border-primary h-full">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <category.icon className="w-6 h-6 text-primary" />
+                <Card className="overflow-hidden hover:shadow-xl transition-all hover:border-primary h-full">
+                  {/* Category Image */}
+                  <div className="relative h-48 overflow-hidden">
+                    <img 
+                      src={category.image} 
+                      alt={category.category}
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                    <div className="absolute bottom-4 left-4">
+                      <div className="w-12 h-12 bg-white/90 backdrop-blur-sm rounded-lg flex items-center justify-center">
+                        <category.icon className="w-6 h-6 text-primary" />
+                      </div>
                     </div>
-                    <h3 className="font-bold text-xl">{category.category}</h3>
                   </div>
-                  <ul className="space-y-2.5">
-                    {category.services.map((service) => (
-                      <li key={service} className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-muted-foreground">{service}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button 
-                    variant="outline" 
-                    className="w-full mt-6 border-primary text-primary hover:bg-primary hover:text-white"
-                    asChild
-                  >
-                    <Link to="/contact">
-                      Get Details
-                    </Link>
-                  </Button>
+                  
+                  {/* Content */}
+                  <div className="p-6">
+                    <h3 className="font-bold text-xl mb-4">{category.category}</h3>
+                    <ul className="space-y-2.5 mb-6">
+                      {category.services.map((service) => (
+                        <li key={service} className="flex items-start text-sm">
+                          <CheckCircle2 className="w-4 h-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
+                          <span className="text-muted-foreground">{service}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Button 
+                      variant="outline" 
+                      className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                      asChild
+                    >
+                      <Link to="/contact">
+                        Get Details
+                      </Link>
+                    </Button>
+                  </div>
                 </Card>
               </motion.div>
             ))}
@@ -392,7 +421,11 @@ const ServicesPage = () => {
       {/* CTA Section */}
       <section className="py-24">
         <div className="container mx-auto px-6">
-          <Card className="bg-gradient-to-br from-primary to-primary-dark text-white p-12 text-center">
+          <Card className="relative overflow-hidden bg-gradient-to-br from-primary to-primary-dark text-white p-12 text-center">
+            <div className="absolute inset-0 opacity-20">
+              <img src={ctaBackgroundImage} alt="Background" className="w-full h-full object-cover" />
+            </div>
+            <div className="relative z-10">
             <h2 className="text-4xl md:text-5xl font-display font-black mb-6">
               Ready to Launch Your Campaign?
             </h2>
@@ -410,6 +443,7 @@ const ServicesPage = () => {
                   Call Us Now
                 </Button>
               </a>
+            </div>
             </div>
           </Card>
         </div>
