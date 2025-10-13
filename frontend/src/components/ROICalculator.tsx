@@ -594,13 +594,13 @@ export const ROICalculator = () => {
                     </div>
 
                     <div className="space-y-2">
-                      <div className="flex items-center justify-between gap-2 mb-2">
+                      <div className="flex items-center justify-between gap-2 mb-3">
                         <div className="flex items-center gap-1.5">
                           <Banknote className="w-4 h-4 text-primary shrink-0" />
                           <span className="text-sm font-semibold">Budget</span>
                         </div>
                         <motion.span 
-                          className="text-primary font-black text-base whitespace-nowrap"
+                          className="text-primary font-black text-lg whitespace-nowrap"
                           key={totalBudget}
                           initial={{ scale: 1.3, color: "hsl(209 100% 60%)" }}
                           animate={{ scale: 1, color: "hsl(209 100% 40%)" }}
@@ -609,62 +609,30 @@ export const ROICalculator = () => {
                           ₹{(totalBudget/100000).toFixed(1)}L
                         </motion.span>
                       </div>
-                      <div className="relative mt-4">
-                        <div className="relative group">
-                          {/* Custom Rocket Slider */}
-                          <div className="relative h-3 w-full bg-gradient-to-r from-green-100 via-emerald-200 to-green-300 rounded-full overflow-hidden shadow-inner">
-                            <motion.div 
-                              className="absolute h-full bg-gradient-to-r from-emerald-400 via-green-500 to-emerald-600 rounded-full"
+                      <div className="relative px-2">
+                        {/* Simplified Mobile Slider */}
+                        <input
+                          type="range"
+                          min="100000"
+                          max="5000000"
+                          step="50000"
+                          value={totalBudget}
+                          onChange={(e) => setTotalBudget(parseInt(e.target.value))}
+                          className="w-full h-12 appearance-none bg-transparent cursor-pointer touch-manipulation"
+                          style={{
+                            WebkitAppearance: 'none',
+                          }}
+                        />
+                        <div className="absolute top-0 left-2 right-2 h-12 flex items-center pointer-events-none">
+                          <div className="w-full h-3 bg-gradient-to-r from-green-100 via-emerald-200 to-green-300 rounded-full shadow-inner">
+                            <div 
+                              className="h-full bg-gradient-to-r from-emerald-400 via-green-500 to-emerald-600 rounded-full transition-all duration-200"
                               style={{ width: `${((totalBudget - 100000) / 4900000) * 100}%` }}
-                              transition={{ type: "spring", stiffness: 300, damping: 30 }}
                             />
-                          </div>
-                          <input
-                            type="range"
-                            min="100000"
-                            max="5000000"
-                            step="50000"
-                            value={totalBudget}
-                            onChange={(e) => setTotalBudget(parseInt(e.target.value))}
-                            className="absolute inset-0 w-full opacity-0 cursor-grab active:cursor-grabbing z-20"
-                          />
-                          {/* Draggable Rocket Icon */}
-                          <div
-                            className="absolute top-1/2 pointer-events-none z-10"
-                            style={{
-                              left: `${((totalBudget - 100000) / 4900000) * 100}%`,
-                              transform: 'translate(-50%, -50%)'
-                            }}
-                          >
-                            <motion.div
-                              className="relative"
-                              animate={{ 
-                                y: [0, -3, 0],
-                                rotate: totalBudget > 2500000 ? -15 : 0
-                              }}
-                              transition={{ 
-                                y: { duration: 0.8, ease: "easeInOut", repeat: Infinity },
-                                rotate: { duration: 0.3 }
-                              }}
-                            >
-                              <div className="w-10 h-10 bg-gradient-to-br from-orange-50 to-red-50 rounded-xl shadow-2xl border-2 border-orange-400 flex items-center justify-center transform hover:scale-110 transition-transform">
-                                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M12 2L9 10h6l-3-8z" fill="#EF4444"/>
-                                  <path d="M9 10L6 20h12l-3-10H9z" fill="#F59E0B"/>
-                                  <ellipse cx="12" cy="20" rx="3" ry="1.5" fill="#FCD34D" opacity="0.5"/>
-                                  <path d="M10 12h4v6h-4z" fill="#DC2626"/>
-                                  <circle cx="10.5" cy="14" r="0.8" fill="#60A5FA"/>
-                                  <circle cx="13.5" cy="14" r="0.8" fill="#60A5FA"/>
-                                  <path d="M9 20l-1.5 3h1.5l1-3z" fill="#F59E0B"/>
-                                  <path d="M15 20l1.5 3h-1.5l-1-3z" fill="#F59E0B"/>
-                                  <path d="M12 20v3" stroke="#F59E0B" strokeWidth="1"/>
-                                </svg>
-                              </div>
-                            </motion.div>
                           </div>
                         </div>
                       </div>
-                      <div className="flex justify-between text-[10px] text-muted-foreground mt-2 px-1">
+                      <div className="flex justify-between text-xs text-muted-foreground px-2">
                         <span>₹1L</span>
                         <span>₹50L</span>
                       </div>
