@@ -49,17 +49,17 @@ export const TrustSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-16 px-4"
         >
           <Badge className="mb-4 bg-accent text-foreground">
             Why Skylar?
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-display font-black text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-black text-foreground mb-4">
             YOUR TRUSTED PARTNER IN
             <br />
             <span className="text-gradient-sky">HYDERABAD AIRPORT</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
             India's first specialized aircraft advertising agency with exclusive Hyderabad domestic terminal partnerships
           </p>
         </motion.div>
