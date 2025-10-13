@@ -208,14 +208,14 @@ export const Services = () => {
 							Delivering aircraft & OOH advertising across India for 10+ years
 						</span>
 					</div>
-					<h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-foreground mb-4">
+					<h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-black text-foreground mb-4 px-4">
 						THE HOUSE OF ADVERTISING
 						<br />
 						<span className="text-gradient-sky">
 							13 INTEGRATED SOLUTIONS
 						</span>
 					</h2>
-					<p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+					<p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
 						Aircraft branding to digital billboards, metro advertising to TV production — 
 						complete 360° advertising solutions exclusively for Hyderabad, India.
 					</p>
