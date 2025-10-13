@@ -64,12 +64,12 @@ const PortfolioPage = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
+            className="text-center max-w-4xl mx-auto px-4"
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-black text-white mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-black text-white mb-6">
               OUR PORTFOLIO
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8">
+            <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8">
               Showcasing Integrated Marketing Campaigns Across All Media Channels
             </p>
           </motion.div>
