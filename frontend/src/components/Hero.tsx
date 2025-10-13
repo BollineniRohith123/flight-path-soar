@@ -224,7 +224,7 @@ export const Hero = () => {
           transition={{ duration: 1, ease: "easeOut" }}
         >
           <motion.h1 
-            className="text-5xl md:text-7xl lg:text-8xl font-display font-black text-white mb-6 tracking-tight text-shadow-premium"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-black text-white mb-4 sm:mb-6 tracking-tight text-shadow-premium px-4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -248,13 +248,36 @@ export const Hero = () => {
           </motion.h1>
 
           <motion.p
-            className="text-xl md:text-2xl lg:text-3xl text-white/90 mb-8 max-w-3xl mx-auto font-light"
+            className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto font-light px-4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             Premium Aircraft Advertising That Reaches Every Sky
           </motion.p>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4"
+          >
+            <Button
+              onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+              size="lg"
+              className="min-h-[48px] min-w-[160px] w-full sm:w-auto bg-gradient-to-r from-accent to-accent/80 hover:from-accent/90 hover:to-accent/70 text-foreground font-semibold text-lg shadow-premium"
+            >
+              Get Started
+            </Button>
+            <Button
+              onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
+              size="lg"
+              variant="outline"
+              className="min-h-[48px] min-w-[160px] w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border-white/30 hover:border-white/50 backdrop-blur-sm text-lg"
+            >
+              Explore Services
+            </Button>
+          </motion.div>
         </motion.div>
       </div>
 
