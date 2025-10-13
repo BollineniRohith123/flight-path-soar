@@ -639,12 +639,12 @@ export const ROICalculator = () => {
                     </div>
 
                     {/* Service Allocation */}
-                    <div className="p-3 sm:p-6 rounded-xl bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/10">
+                    <div className="p-4 sm:p-6 rounded-xl bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/10">
                       <Label className="text-sm sm:text-base font-semibold mb-3 sm:mb-4 flex items-center justify-between gap-2">
-                        <span className="flex items-center gap-1 sm:gap-2 text-xs sm:text-base">
-                          🎨 <span className="truncate">Media Allocation</span>
+                        <span className="flex items-center gap-1 sm:gap-2 text-sm sm:text-base">
+                          🎨 <span className="truncate">Media Mix</span>
                         </span>
-                        <Badge variant={totalAllocation === 100 ? "default" : "destructive"} className="shadow-sm">
+                        <Badge variant={totalAllocation === 100 ? "default" : "destructive"} className="shadow-sm text-xs">
                           {totalAllocation}% {totalAllocation === 100 ? '✓' : '⚠️'}
                         </Badge>
                       </Label>
