@@ -65,7 +65,7 @@ export const TrustSection = () => {
         </motion.div>
 
         {/* Trust Badges */}
-        <div className="grid md:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {trustBadges.map((badge, index) => (
             <motion.div
               key={badge.title}
