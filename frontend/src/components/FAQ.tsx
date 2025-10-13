@@ -70,14 +70,14 @@ export const FAQ = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12"
+          className="text-center mb-12 px-4"
         >
-          <h2 className="text-4xl md:text-5xl font-display font-black text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-black text-foreground mb-4">
             QUESTIONS?
             <br />
             <span className="text-gradient-sky">WE'VE GOT ANSWERS</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
             Everything you need to know about aircraft advertising in Hyderabad
           </p>
         </motion.div>
