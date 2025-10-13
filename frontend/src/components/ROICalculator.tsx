@@ -461,13 +461,13 @@ export const ROICalculator = () => {
                   <span className="text-base sm:text-2xl">Campaign Builder</span>
                 </h3>
 
-                <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
                   {/* LEFT COLUMN: Parameters */}
-                  <div className="space-y-6">
+                  <div className="space-y-4 sm:space-y-6">
 
                     {/* Campaign Basics */}
                     <motion.div 
-                      className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4"
+                      className="grid grid-cols-1 gap-3 sm:gap-4"
                       whileHover={{ scale: 1.01 }}
                       transition={{ type: "spring", stiffness: 300 }}
                     >
