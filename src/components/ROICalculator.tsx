@@ -454,6 +454,81 @@ export const ROICalculator = () => {
                         </motion.div>
                       )}
                     </div>
+
+                    {/* Visual Service Breakdown with SVG */}
+                    <div className="p-6 mt-6 rounded-xl bg-gradient-to-br from-accent/5 to-primary/5 border border-border">
+                      <Label className="text-base font-semibold mb-4 block">
+                        📊 Visual Media Mix
+                      </Label>
+                      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+                        {services.map((service, index) => {
+                          const Icon = service.icon;
+                          const allocation = serviceAllocations[service.id as keyof typeof serviceAllocations];
+                          const circumference = 2 * Math.PI * 35;
+                          const offset = circumference - (allocation / 100) * circumference;
+                          
+                          return (
+                            <motion.div
+                              key={service.id}
+                              className="flex flex-col items-center"
+                              initial={{ opacity: 0, scale: 0.8 }}
+                              animate={{ opacity: 1, scale: 1 }}
+                              transition={{ delay: index * 0.1 }}
+                              whileHover={{ scale: 1.1 }}
+                            >
+                              {/* Circular Progress SVG */}
+                              <div className="relative w-20 h-20">
+                                <svg className="transform -rotate-90 w-20 h-20">
+                                  {/* Background circle */}
+                                  <circle
+                                    cx="40"
+                                    cy="40"
+                                    r="35"
+                                    stroke="hsl(var(--muted))"
+                                    strokeWidth="6"
+                                    fill="none"
+                                  />
+                                  {/* Progress circle */}
+                                  <motion.circle
+                                    cx="40"
+                                    cy="40"
+                                    r="35"
+                                    stroke="hsl(var(--primary))"
+                                    strokeWidth="6"
+                                    fill="none"
+                                    strokeLinecap="round"
+                                    initial={{ strokeDashoffset: circumference }}
+                                    animate={{ strokeDashoffset: offset }}
+                                    transition={{ duration: 1, delay: index * 0.1 }}
+                                    style={{
+                                      strokeDasharray: circumference,
+                                    }}
+                                    key={`circle-${allocation}`}
+                                  />
+                                </svg>
+                                {/* Center icon */}
+                                <div className="absolute inset-0 flex items-center justify-center">
+                                  <Icon className="w-6 h-6 text-primary" />
+                                </div>
+                                {/* Percentage text */}
+                                <motion.div 
+                                  className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground text-xs font-bold px-2 py-0.5 rounded-full"
+                                  key={`text-${allocation}`}
+                                  initial={{ scale: 1.5, opacity: 0 }}
+                                  animate={{ scale: 1, opacity: 1 }}
+                                  transition={{ delay: index * 0.1 + 0.5 }}
+                                >
+                                  {allocation}%
+                                </motion.div>
+                              </div>
+                              <p className="text-xs text-center mt-2 font-medium text-muted-foreground">
+                                {service.name.split(' ')[0]}
+                              </p>
+                            </motion.div>
+                          );
+                        })}
+                      </div>
+                    </div>
                   </div>
                 </Card>
               </motion.div>

@@ -134,14 +134,14 @@ const additionalServices = [
     icon: Newspaper,
     category: "Traditional Media",
     services: [
-      "Press Advertising - Print Campaigns",
-      "Direct Mail Marketing",
-      "Cinema Advertising",
       "TV Commercial Production",
       "Radio Advertising",
-      "Magazine Placements",
-      "Newspaper Campaigns",
-      "Print Production Services"
+      "Cinema Advertising",
+      "Content Creation Services",
+      "Video Production",
+      "Audio Production Services",
+      "Broadcast Campaign Management",
+      "Media Strategy & Planning"
     ]
   },
   {

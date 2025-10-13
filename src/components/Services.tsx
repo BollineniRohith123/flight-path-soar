@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Plane, Home, MapPin, Bus, Radio, Monitor, Megaphone, Factory, Briefcase } from "lucide-react";
+import { useState } from "react";
+import { Plane, Home, MapPin, Bus, Radio, Monitor, Megaphone, Factory, Briefcase, TrendingUp } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import exteriorWrapImage from "@/assets/exterior-aircraft-wrap-three-quarter.jpg";
 import interiorCabinImage from "@/assets/interior-aircraft-branding-wide-cabin.jpg";
 import airportGroundImage from "@/assets/airport-ground-services-tarmac-focus.jpg";
@@ -12,7 +14,6 @@ import metroAdImage from "@/assets/transit-metro-advertising-platform-shot.jpg";
 import ledBillboardsImage from "@/assets/digital-led-billboards-night-dynamic.jpg";
 import interactiveKioskImage from "@/assets/digital-interactive-kiosk-user-closeup.jpg";
 import tvStudioImage from "@/assets/traditional-media-tv-studio-wide.jpg";
-import printAdImage from "@/assets/traditional-print-advertising-spread.jpg";
 import productionImage from "@/assets/production-facility-team-in-action.jpg";
 import strategyImage from "@/assets/campaign-strategy-meeting-focus-hands.jpg";
 
@@ -148,19 +149,6 @@ const services = [
 		category: "Traditional Media",
 	},
 	{
-		icon: Briefcase,
-		title: "Print Media Advertising",
-		description: "Premium placements in newspapers and magazines with high-quality print production and strategic distribution.",
-		features: [
-			"Major Publications",
-			"Quality Print Production",
-			"Strategic Placement",
-			"Editorial Integration",
-		],
-		image: printAdImage,
-		category: "Traditional Media",
-	},
-	{
 		icon: Factory,
 		title: "Production & Installation",
 		description: "In-house large-format printing facility with expert installation teams ensuring perfect execution every time.",
@@ -193,6 +181,9 @@ export const Services = () => {
 		triggerOnce: true,
 		threshold: 0.1,
 	});
+
+	const [showAll, setShowAll] = useState(false);
+	const displayedServices = showAll ? services : services.slice(0, 3);
 
 	return (
 		<section
@@ -231,7 +222,7 @@ export const Services = () => {
 				</motion.div>
 
 				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-					{services.map((service, index) => (
+					{displayedServices.map((service, index) => (
 						<motion.div
 							key={service.title}
 							initial={{ opacity: 0, y: 50 }}
@@ -317,6 +308,35 @@ export const Services = () => {
 						</motion.div>
 					))}
 				</div>
+
+				{/* Load More Button */}
+				{!showAll && services.length > 3 && (
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						animate={inView ? { opacity: 1, y: 0 } : {}}
+						transition={{ duration: 0.6, delay: 0.8 }}
+						className="mt-12 text-center"
+					>
+						<Button
+							onClick={() => setShowAll(true)}
+							size="lg"
+							className="group bg-gradient-to-r from-primary to-accent hover:from-primary-dark hover:to-accent-dark text-white font-bold px-8 py-6 text-lg rounded-full shadow-premium hover:shadow-gold transition-all duration-300 transform hover:scale-105"
+						>
+							<span className="flex items-center gap-3">
+								Load More Services
+								<motion.div
+									animate={{ y: [0, 4, 0] }}
+									transition={{ duration: 1.5, repeat: Infinity }}
+								>
+									<TrendingUp className="w-5 h-5" />
+								</motion.div>
+							</span>
+						</Button>
+						<p className="text-sm text-muted-foreground mt-4">
+							Discover {services.length - 3} more advertising solutions
+						</p>
+					</motion.div>
+				)}
 			</div>
 		</section>
 	);
