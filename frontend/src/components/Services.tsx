@@ -6,16 +6,16 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import exteriorWrapImage from "@/assets/indian-aircraft-hero-2.jpg";
 import interiorCabinImage from "@/assets/interior-aircraft-branding-wide-cabin.jpg";
-import airportGroundImage from "@/assets/airport-ground-services-tarmac-focus.jpg";
+import airportGroundImage from "@/assets/airport-ground-crew-operations.jpg";
 import unipolesImage from "@/assets/outdoor-media-unipoles-dusk.jpg";
-import hoardingsImage from "@/assets/outdoor-billboard-advertising.jpg";
+import hoardingsImage from "@/assets/street-advertising-signage.jpg";
 import busBrandingImage from "@/assets/transit-bus-branding-side-profile.jpg";
 import metroAdImage from "@/assets/transit-bus-interior-ads.jpg";
 import ledBillboardsImage from "@/assets/digital-led-displays-urban.jpg";
-import interactiveKioskImage from "@/assets/digital-interactive-kiosk-user-closeup.jpg";
+import interactiveKioskImage from "@/assets/urban-advertising-displays.jpg";
 import tvStudioImage from "@/assets/traditional-media-tv-studio-wide.jpg";
-import productionImage from "@/assets/production-facility-team-in-action.jpg";
-import strategyImage from "@/assets/business-meeting-discussion.jpg";
+import productionImage from "@/assets/large-format-printing-machine.jpg";
+import strategyImage from "@/assets/corporate-meeting-professional.jpg";
 
 const services = [
 	{
