@@ -50,13 +50,13 @@ export const ContactForm = () => {
           transition={{ duration: 0.8 }}
           className="max-w-3xl mx-auto"
         >
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-display font-black text-foreground mb-4">
+          <div className="text-center mb-12 px-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-black text-foreground mb-4">
               LAUNCH YOUR
               <br />
               <span className="text-gradient-gold">CAMPAIGN</span>
             </h2>
-            <p className="text-xl text-foreground/80">
+            <p className="text-lg sm:text-xl text-foreground/80">
               Ready for takeoff? Get your sky-high quote in minutes
             </p>
           </div>
