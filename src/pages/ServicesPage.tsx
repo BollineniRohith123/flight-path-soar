@@ -10,9 +10,9 @@ import {
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import exteriorImage from "@/assets/exterior-advertising.jpg";
-import interiorImage from "@/assets/interior-branding.jpg";
-import campaignImage from "@/assets/campaign-management.jpg";
+import exteriorWrapImage from "@/assets/exterior-aircraft-wrap-three-quarter.jpg";
+import interiorCabinImage from "@/assets/interior-aircraft-branding-wide-cabin.jpg";
+import airportGroundImage from "@/assets/airport-ground-services-tarmac-focus.jpg";
 
 const services = [
   {
@@ -37,7 +37,7 @@ const services = [
       "360° Press Coverage"
     ],
     pricing: "Custom Packages - Contact for Quote",
-    image: exteriorImage,
+    image: exteriorWrapImage,
   },
   {
     icon: Home,
@@ -60,7 +60,7 @@ const services = [
       "Multiple Touchpoints Per Flight"
     ],
     pricing: "Starting from ₹15 Lakhs/Month",
-    image: interiorImage,
+    image: interiorCabinImage,
   },
   {
     icon: TrendingUp,
@@ -83,7 +83,7 @@ const services = [
       "Measurable Campaign Performance"
     ],
     pricing: "Packages Starting from ₹5 Lakhs",
-    image: campaignImage,
+    image: airportGroundImage,
   },
 ];
 
