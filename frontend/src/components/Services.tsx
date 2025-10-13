@@ -4,18 +4,18 @@ import { useState } from "react";
 import { Plane, Home, MapPin, Bus, Radio, Monitor, Megaphone, Factory, Briefcase, TrendingUp } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import exteriorWrapImage from "@/assets/exterior-aircraft-wrap-three-quarter.jpg";
+import exteriorWrapImage from "@/assets/indian-aircraft-hero-2.jpg";
 import interiorCabinImage from "@/assets/interior-aircraft-branding-wide-cabin.jpg";
 import airportGroundImage from "@/assets/airport-ground-services-tarmac-focus.jpg";
 import unipolesImage from "@/assets/outdoor-media-unipoles-dusk.jpg";
-import hoardingsImage from "@/assets/outdoor-hoardings-banners-indian-street-level.jpg";
+import hoardingsImage from "@/assets/outdoor-billboard-advertising.jpg";
 import busBrandingImage from "@/assets/transit-bus-branding-side-profile.jpg";
-import metroAdImage from "@/assets/transit-metro-advertising-platform-shot.jpg";
-import ledBillboardsImage from "@/assets/digital-led-billboards-night-dynamic.jpg";
+import metroAdImage from "@/assets/transit-bus-interior-ads.jpg";
+import ledBillboardsImage from "@/assets/digital-led-displays-urban.jpg";
 import interactiveKioskImage from "@/assets/digital-interactive-kiosk-user-closeup.jpg";
 import tvStudioImage from "@/assets/traditional-media-tv-studio-wide.jpg";
 import productionImage from "@/assets/production-facility-team-in-action.jpg";
-import strategyImage from "@/assets/campaign-strategy-meeting-focus-hands.jpg";
+import strategyImage from "@/assets/business-meeting-discussion.jpg";
 
 const services = [
 	{
