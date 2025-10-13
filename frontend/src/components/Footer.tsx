@@ -9,7 +9,7 @@ export const Footer = () => {
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-primary via-accent to-primary" />
       
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
             <motion.div
