@@ -165,3 +165,64 @@ All colors MUST be HSL.
   0%, 100% { opacity: 0.3; transform: scale(1); }
   50% { opacity: 0.5; transform: scale(1.05); }
 }
+
+/* Custom Range Input Styles for Mobile */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, hsl(209 100% 40%), hsl(209 100% 60%));
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border: 3px solid white;
+  transition: transform 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+input[type="range"]::-webkit-slider-thumb:active {
+  transform: scale(1.2);
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, hsl(209 100% 40%), hsl(209 100% 60%));
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border: 3px solid white;
+  transition: transform 0.15s ease;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  transform: scale(1.1);
+}
+
+input[type="range"]::-moz-range-thumb:active {
+  transform: scale(1.2);
+}
+
+/* Touch-friendly interactions */
+@media (hover: none) and (pointer: coarse) {
+  input[type="range"]::-webkit-slider-thumb {
+    height: 40px;
+    width: 40px;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    height: 40px;
+    width: 40px;
+  }
+}
