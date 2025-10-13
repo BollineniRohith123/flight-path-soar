@@ -649,7 +649,7 @@ export const ROICalculator = () => {
                         </Badge>
                       </Label>
 
-                      <div className="space-y-4">
+                      <div className="space-y-3 sm:space-y-4">
                         {services.map((service, index) => {
                           const Icon = service.icon;
                           const allocation = serviceAllocations[service.id as keyof typeof serviceAllocations];
@@ -662,70 +662,39 @@ export const ROICalculator = () => {
                               initial={{ opacity: 0, x: -20 }}
                               animate={{ opacity: 1, x: 0 }}
                               transition={{ delay: index * 0.1 }}
-                              whileHover={{ x: 4 }}
                             >
                               <div className="flex items-center justify-between gap-2">
-                                <div className="flex items-center gap-1 sm:gap-2 min-w-0 flex-1">
-                                  <div className="p-1 sm:p-1.5 bg-primary/10 rounded-md shrink-0">
-                                    <Icon className="w-3 h-3 sm:w-4 sm:h-4 text-primary" />
+                                <div className="flex items-center gap-2 min-w-0 flex-1">
+                                  <div className="p-1.5 bg-primary/10 rounded-md shrink-0">
+                                    <Icon className="w-4 h-4 text-primary" />
                                   </div>
-                                  <span className="text-xs sm:text-sm font-medium truncate">{service.name}</span>
+                                  <span className="text-sm font-medium truncate">{service.name}</span>
                                   {isOptimal && (
-                                    <motion.div
-                                      initial={{ scale: 0 }}
-                                      animate={{ scale: 1, rotate: [0, 10, -10, 0] }}
-                                      transition={{ type: "spring", stiffness: 500 }}
-                                    >
-                                      <Lightbulb className="w-4 h-4 text-amber-500 drop-shadow-lg" />
-                                    </motion.div>
+                                    <Lightbulb className="w-4 h-4 text-amber-500 shrink-0" />
                                   )}
                                 </div>
-                                <motion.span 
-                                  className="text-xs sm:text-sm text-primary font-bold shrink-0 whitespace-nowrap"
-                                  key={allocation}
-                                  initial={{ scale: 1.3 }}
-                                  animate={{ scale: 1 }}
-                                  transition={{ type: "spring", stiffness: 300 }}
-                                >
+                                <span className="text-sm text-primary font-bold shrink-0 min-w-[48px] text-right">
                                   {allocation}%
-                                </motion.span>
+                                </span>
                               </div>
-                              <div className="relative mt-2">
-                                <div className="relative group">
-                                  {/* Custom Service Slider */}
-                                  <div className="relative h-2.5 w-full bg-gradient-to-r from-purple-100 via-purple-200 to-purple-300 rounded-full overflow-hidden shadow-inner">
-                                    <motion.div 
-                                      className="absolute h-full bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 rounded-full"
+                              <div className="relative px-1">
+                                {/* Simplified Mobile-Friendly Slider */}
+                                <input
+                                  type="range"
+                                  min="0"
+                                  max="100"
+                                  step="5"
+                                  value={allocation}
+                                  onChange={(e) => handleAllocationChange(service.id, parseInt(e.target.value))}
+                                  className="w-full h-10 appearance-none bg-transparent cursor-pointer touch-manipulation"
+                                  style={{ WebkitAppearance: 'none' }}
+                                />
+                                <div className="absolute top-0 left-1 right-1 h-10 flex items-center pointer-events-none">
+                                  <div className="w-full h-2.5 bg-gradient-to-r from-purple-100 via-purple-200 to-purple-300 rounded-full shadow-inner">
+                                    <div 
+                                      className="h-full bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 rounded-full transition-all duration-200"
                                       style={{ width: `${allocation}%` }}
-                                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
                                     />
-                                  </div>
-                                  <input
-                                    type="range"
-                                    min="0"
-                                    max="100"
-                                    step="5"
-                                    value={allocation}
-                                    onChange={(e) => handleAllocationChange(service.id, parseInt(e.target.value))}
-                                    className="absolute inset-0 w-full opacity-0 cursor-grab active:cursor-grabbing z-20"
-                                  />
-                                  {/* Draggable Service Icon */}
-                                  <div
-                                    className="absolute top-1/2 pointer-events-none z-10 transition-opacity duration-200"
-                                    style={{
-                                      left: `${allocation}%`,
-                                      transform: `translate(-50%, -50%) scale(${allocation > 0 ? 1 : 0.7})`,
-                                      opacity: allocation > 0 ? 1 : 0.4
-                                    }}
-                                  >
-                                    <motion.div
-                                      whileHover={{ scale: 1.1 }}
-                                      className="relative"
-                                    >
-                                      <div className="w-8 h-8 bg-white rounded-lg shadow-xl border-2 border-purple-400 flex items-center justify-center transform transition-transform">
-                                        <Icon className="w-4 h-4 text-purple-600" />
-                                      </div>
-                                    </motion.div>
                                   </div>
                                 </div>
                               </div>
