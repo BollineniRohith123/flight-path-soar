@@ -309,31 +309,44 @@ export const Services = () => {
 					))}
 				</div>
 
-				{/* Load More Button */}
-				{!showAll && services.length > 3 && (
+				{/* Load More / Show Less Button */}
+				{services.length > 3 && (
 					<motion.div
 						initial={{ opacity: 0, y: 20 }}
 						animate={inView ? { opacity: 1, y: 0 } : {}}
 						transition={{ duration: 0.6, delay: 0.8 }}
 						className="mt-12 text-center"
 					>
-						<Button
-							onClick={() => setShowAll(true)}
-							size="lg"
-							className="group bg-gradient-to-r from-primary to-accent hover:from-primary-dark hover:to-accent-dark text-white font-bold px-8 py-6 text-lg rounded-full shadow-premium hover:shadow-gold transition-all duration-300 transform hover:scale-105"
-						>
-							<span className="flex items-center gap-3">
-								Load More Services
-								<motion.div
-									animate={{ y: [0, 4, 0] }}
-									transition={{ duration: 1.5, repeat: Infinity }}
-								>
-									<TrendingUp className="w-5 h-5" />
-								</motion.div>
-							</span>
-						</Button>
+						{!showAll ? (
+							<Button
+								onClick={() => setShowAll(true)}
+								size="lg"
+								className="group bg-gradient-to-r from-primary to-accent hover:from-primary-dark hover:to-accent-dark text-white font-bold px-8 py-6 text-lg rounded-full shadow-premium hover:shadow-gold transition-all duration-300 transform hover:scale-105"
+							>
+								<span className="flex items-center gap-3">
+									Load More Services
+									<motion.div
+										animate={{ y: [0, 4, 0] }}
+										transition={{ duration: 1.5, repeat: Infinity }}
+									>
+										<TrendingUp className="w-5 h-5" />
+									</motion.div>
+								</span>
+							</Button>
+						) : (
+							<Button
+								onClick={() => setShowAll(false)}
+								size="lg"
+								className="bg-background/60 border border-border text-foreground font-semibold px-8 py-6 rounded-full hover:bg-accent/5 transition-all"
+							>
+								Show Less
+							</Button>
+						)}
+
 						<p className="text-sm text-muted-foreground mt-4">
-							Discover {services.length - 3} more advertising solutions
+							{!showAll
+								? `Discover ${services.length - 3} more advertising solutions`
+								: "Showing all services"}
 						</p>
 					</motion.div>
 				)}

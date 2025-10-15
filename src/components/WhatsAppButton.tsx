@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { MessageCircle } from "lucide-react";
 import { useState } from "react";
 
 export const WhatsAppButton = () => {
@@ -38,11 +37,6 @@ export const WhatsAppButton = () => {
             ease: "easeInOut",
           }}
         />
-        
-        {/* Main button */}
-        <div className="relative w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow">
-          <MessageCircle className="w-8 h-8 text-white" />
-        </div>
 
         {/* Tooltip */}
         <motion.div
@@ -53,15 +47,6 @@ export const WhatsAppButton = () => {
           <div className="text-sm font-semibold">Chat on WhatsApp</div>
           <div className="text-xs text-gray-300">Get instant responses</div>
           <div className="absolute right-[-6px] top-1/2 -translate-y-1/2 w-0 h-0 border-t-[6px] border-t-transparent border-l-[6px] border-l-gray-900 border-b-[6px] border-b-transparent" />
-        </motion.div>
-
-        {/* Notification badge */}
-        <motion.div
-          className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full flex items-center justify-center text-white text-xs font-bold"
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{ duration: 1, repeat: Infinity }}
-        >
-          1
         </motion.div>
       </div>
     </motion.button>

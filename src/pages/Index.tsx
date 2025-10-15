@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
+import { Mission } from "@/components/Mission";
 import { Services } from "@/components/Services";
-import { Statistics } from "@/components/Statistics";
 import { TrustSection } from "@/components/TrustSection";
 import { ROICalculator } from "@/components/ROICalculator";
 import { ProcessTimeline } from "@/components/ProcessTimeline";
@@ -11,13 +11,14 @@ import { FAQ } from "@/components/FAQ";
 import { ContactForm } from "@/components/ContactForm";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { FixedCTABar } from "@/components/FixedCTABar";
 
 const Index = () => {
   return (
     <main className="min-h-screen">
       <Navbar />
       <Hero />
-      <Statistics />
+      <Mission />
       <Services />
       <TrustSection />
       <ROICalculator />
@@ -28,6 +29,7 @@ const Index = () => {
       <ContactForm />
       <Footer />
       <WhatsAppButton />
+      <FixedCTABar />
     </main>
   );
 };

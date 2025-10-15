@@ -142,6 +142,9 @@ All colors MUST be HSL.
   .animate-float { animation: float 6s ease-in-out infinite; }
   .animate-float-delayed { animation: float 6s ease-in-out infinite 3s; }
   .animate-pulse-slow { animation: pulseSlow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+  /* Faster scrolling for brand logos: reduced from 30s to 12s */
+  .animate-scroll-infinite { animation: scroll-infinite 12s linear infinite; }
+  .animate-scroll-infinite:hover { animation-play-state: paused; }
 }
 
 @keyframes counterPulse {
@@ -164,6 +167,11 @@ All colors MUST be HSL.
 @keyframes pulseSlow {
   0%, 100% { opacity: 0.3; transform: scale(1); }
   50% { opacity: 0.5; transform: scale(1.05); }
+}
+
+@keyframes scroll-infinite {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* Custom Range Input Styles for Mobile */

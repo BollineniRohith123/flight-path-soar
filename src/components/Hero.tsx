@@ -100,10 +100,11 @@ export const Hero = () => {
           </div>
         )}
         
-        {/* Background Video */}
+        {/* Background Video (no borders) */}
         {!videoError && (
           <video
             ref={videoRef}
+            // Force cover so the video always fills the hero area (will crop instead of showing borders)
             className="absolute inset-0 w-full h-full object-cover"
             autoPlay
             loop

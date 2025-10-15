@@ -4,6 +4,38 @@ import { Shield, Award, Users, Clock, CheckCircle, Star } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
+const clientLogos = [
+  { name: "Luxe Homes Realty", abbr: "LHR" },
+  { name: "AutoElite Motors", abbr: "AM" },
+  { name: "WellnessFirst Hospitals", abbr: "WH" },
+  { name: "Premium Finance Corp", abbr: "PFC" },
+  { name: "Elite Education Group", abbr: "EEG" },
+  { name: "Luxury Hospitality Chain", abbr: "LHC" },
+];
+
+const trackRecordStats = [
+  {
+    value: "100+",
+    title: "Brands Trust Skylar",
+    description: "Across diverse industries",
+  },
+  {
+    value: "500+",
+    title: "Aircraft Branded",
+    description: "Premium fleet coverage",
+  },
+  {
+    value: "50M+",
+    title: "Passenger Impressions",
+    description: "Monthly reach achieved",
+  },
+  {
+    value: "98%",
+    title: "Client Retention Rate",
+    description: "Long-term partnerships",
+  },
+];
+
 const trustBadges = [
   {
     icon: Shield,
@@ -43,8 +75,93 @@ export const TrustSection = () => {
   });
 
   return (
-    <section className="py-24 bg-muted/30 relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-b from-background via-muted/30 to-background relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10" ref={ref}>
+        
+        {/* Brands Who Trust Skylar Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">
+            Trusted by Industry Leaders
+          </Badge>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-black text-foreground mb-6">
+            Brands Who Trust Skylar
+          </h2>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-4xl mx-auto">
+            From startups to Fortune 500 companies, leading brands choose Skylar for their most important advertising campaigns.
+          </p>
+        </motion.div>
+
+        {/* Scrolling Client Logos */}
+        <div className="mb-20 overflow-hidden">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={inView ? { opacity: 1 } : {}}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative"
+          >
+            <div className="flex gap-8 animate-scroll-infinite">
+              {[...clientLogos, ...clientLogos].map((client, index) => (
+                <motion.div
+                  key={`${client.abbr}-${index}`}
+                  className="flex-shrink-0 group"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <div className="bg-card border border-border rounded-xl p-8 hover:border-primary/50 hover:shadow-lg transition-all duration-300 min-w-[200px]">
+                    <div className="text-center">
+                      <div className="w-20 h-20 mx-auto mb-4 bg-muted rounded-lg flex items-center justify-center text-2xl font-bold text-muted-foreground group-hover:bg-primary/10 group-hover:text-primary transition-all">
+                        {client.abbr}
+                      </div>
+                      <p className="text-sm font-medium text-foreground">{client.name}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Our Track Record Speaks */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mb-20"
+        >
+          <h3 className="text-3xl sm:text-4xl md:text-5xl font-display font-black text-foreground text-center mb-12">
+            Our Track Record Speaks
+          </h3>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {trackRecordStats.map((stat, index) => (
+              <motion.div
+                key={stat.title}
+                initial={{ opacity: 0, y: 30 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
+              >
+                <Card className="p-8 text-center hover:shadow-premium transition-all duration-300 bg-gradient-to-br from-card to-card/50 border-border/50 group hover:border-primary/30 h-full">
+                  <div className="text-5xl lg:text-6xl font-display font-black text-primary mb-3 group-hover:scale-110 transition-transform">
+                    {stat.value}
+                  </div>
+                  <h4 className="text-lg font-bold text-foreground mb-2">
+                    {stat.title}
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    {stat.description}
+                  </p>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Why Skylar Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -120,33 +237,6 @@ export const TrustSection = () => {
               </p>
             </div>
           </Card>
-        </motion.div>
-
-        {/* Social Proof Numbers */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-16 text-center"
-        >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div>
-              <div className="text-4xl font-display font-black text-primary mb-2">100%</div>
-              <div className="text-sm text-muted-foreground">Client Satisfaction</div>
-            </div>
-            <div>
-              <div className="text-4xl font-display font-black text-primary mb-2">15+</div>
-              <div className="text-sm text-muted-foreground">Years Experience</div>
-            </div>
-            <div>
-              <div className="text-4xl font-display font-black text-primary mb-2">200+</div>
-              <div className="text-sm text-muted-foreground">Campaigns Delivered</div>
-            </div>
-            <div>
-              <div className="text-4xl font-display font-black text-primary mb-2">4.9★</div>
-              <div className="text-sm text-muted-foreground">Average Rating</div>
-            </div>
-          </div>
         </motion.div>
       </div>
     </section>
