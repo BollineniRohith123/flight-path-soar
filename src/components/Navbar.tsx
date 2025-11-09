@@ -59,24 +59,17 @@ export const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
             <motion.div
-              whileHover={{ rotate: 360 }}
-              transition={{ duration: 0.6 }}
-              className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+              className="flex items-center"
             >
-              <Plane className="w-6 h-6 text-white" />
+              <img 
+                src="/skylar-logo.svg" 
+                alt="Skylar" 
+                className="h-10 w-auto"
+                style={{ filter: isScrolled ? 'none' : 'brightness(0) invert(1)' }}
+              />
             </motion.div>
-            <div>
-              <h1 className={`text-2xl font-display font-black transition-colors ${
-                isScrolled ? "text-foreground group-hover:text-primary" : "text-white group-hover:text-accent"
-              }`}>
-                SKYLAR
-              </h1>
-              <p className={`text-xs -mt-1 transition-colors ${
-                isScrolled ? "text-muted-foreground" : "text-white/70"
-              }`}>
-                Aircraft Advertising
-              </p>
-            </div>
           </Link>
 
           {/* Desktop Navigation */}

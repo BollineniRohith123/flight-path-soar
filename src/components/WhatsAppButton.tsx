@@ -8,7 +8,7 @@ export const WhatsAppButton = () => {
     const message = encodeURIComponent(
       "Hi! I'm interested in aircraft advertising at Hyderabad airport. Can you share more details?"
     );
-    window.open(`https://wa.me/919876543210?text=${message}`, "_blank");
+    window.open(`https://wa.me/918019199995?text=${message}`, "_blank");
   };
 
   return (

@@ -18,20 +18,20 @@ const ContactPage = () => {
     {
       icon: Phone,
       title: "Call Us",
-      primary: "+91 98765 43210",
-      secondary: "+91 91234 56789",
+      primary: "+91 80191 99995",
+      secondary: "Direct Line",
       description: "Mon-Sat, 9 AM - 7 PM IST",
       action: "Call Now",
-      link: "tel:+919876543210"
+      link: "tel:+918019199995"
     },
     {
       icon: MessageCircle,
       title: "WhatsApp",
-      primary: "+91 98765 43210",
+      primary: "+91 80191 99995",
       secondary: "Quick Response Guaranteed",
       description: "24/7 Instant Support",
       action: "Chat Now",
-      link: "https://wa.me/919876543210"
+      link: "https://wa.me/918019199995"
     },
     {
       icon: Mail,
@@ -57,7 +57,7 @@ const ContactPage = () => {
     {
       city: "Hyderabad (Head Office)",
       address: "Plot No. 123, Jubilee Hills, Road No. 36,\nHyderabad, Telangana - 500033",
-      phone: "+91 98765 43210",
+      phone: "+91 80191 99995",
       email: "hyderabad@skylaradvertising.com",
       hours: "Mon-Sat: 9:00 AM - 7:00 PM",
       isMain: true
@@ -65,7 +65,7 @@ const ContactPage = () => {
     {
       city: "Airport Operations",
       address: "Rajiv Gandhi International Airport,\nShamshabad, Hyderabad - 500108",
-      phone: "+91 91234 56789",
+      phone: "+91 80191 99995",
       email: "airport@skylaradvertising.com",
       hours: "24/7 Operations",
       isMain: false
@@ -317,13 +317,13 @@ const ContactPage = () => {
             Our team is available 24/7 for urgent campaign requirements
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+919876543210">
+            <a href="tel:+918019199995">
               <Button size="lg" variant="secondary" className="text-lg px-8">
                 <Phone className="w-5 h-5 mr-2" />
                 Emergency Hotline
               </Button>
             </a>
-            <a href="https://wa.me/919876543210">
+            <a href="https://wa.me/918019199995">
               <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent border-white text-white hover:bg-white hover:text-primary">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 WhatsApp Support

@@ -47,24 +47,9 @@ const AboutPage = () => {
 
   const team = [
     {
-      name: "Rajesh Kumar",
+      name: "Bala Krishna",
       role: "Founder & CEO",
-      description: "15+ years in aviation marketing and outdoor advertising — strategic lead and industry connector.",
-    },
-    {
-      name: "Priya Sharma",
-      role: "Creative Director",
-      description: "Award-winning creative lead specializing in large-format branding and campaign design.",
-    },
-    {
-      name: "Amit Patel",
-      role: "Operations Head",
-      description: "Ex-airline operations manager ensuring fast, compliant installations and flawless delivery.",
-    },
-    {
-      name: "Sneha Reddy",
-      role: "Client Success Manager",
-      description: "Dedicated to client outcomes and campaign performance — your single point of contact.",
+      description: "Visionary leader with extensive experience in aviation marketing and outdoor advertising. Strategic expert driving innovation and excellence in aircraft advertising solutions.",
     },
   ];
 

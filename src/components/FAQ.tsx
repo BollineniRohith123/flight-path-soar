@@ -70,8 +70,8 @@ export const FAQ = () => {
     threshold: 0.1,
   });
 
-  const handleWhatsAppContact = () => {
-    window.open("https://wa.me/919876543210?text=Hi! I have questions about aircraft advertising at Hyderabad airport.", "_blank");
+  const handleWhatsAppClick = () => {
+    window.open("https://wa.me/918019199995?text=Hi! I have questions about aircraft advertising at Hyderabad airport.", "_blank");
   };
 
   return (
@@ -146,10 +146,10 @@ export const FAQ = () => {
                 Chat with our aviation advertising experts on WhatsApp
               </p>
               <Button
-                onClick={handleWhatsAppContact}
+                onClick={handleWhatsAppClick}
                 size="lg"
                 variant="premium"
-                className="text-lg font-semibold"
+className="text-lg font-semibold"
               >
                 Chat on WhatsApp →
               </Button>

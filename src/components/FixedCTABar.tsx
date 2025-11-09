@@ -34,13 +34,13 @@ export const FixedCTABar = () => {
 
   const handleWhatsApp = () => {
     window.open(
-      "https://wa.me/919876543210?text=Hi! I'm interested in aircraft advertising with Skylar.",
+      "https://wa.me/918019199995?text=Hi! I'm interested in aircraft advertising with Skylar.",
       "_blank"
     );
   };
 
-  const handleCallNow = () => {
-    window.location.href = "tel:+919876543210";
+  const handleCallClick = () => {
+    window.location.href = "tel:+918019199995";
   };
 
   return (
@@ -107,7 +107,7 @@ export const FixedCTABar = () => {
                   </Button>
                   
                   <Button
-                    onClick={handleCallNow}
+                    onClick={handleCallClick}
                     size="lg"
                     variant="outline"
                     className="bg-white/10 hover:bg-white/20 text-white border-white/30 hover:border-white/50 backdrop-blur-sm transition-all duration-300 h-9 md:h-11"
