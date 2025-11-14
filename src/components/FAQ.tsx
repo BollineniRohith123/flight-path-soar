@@ -71,7 +71,7 @@ export const FAQ = () => {
   });
 
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/918019199995?text=Hi! I have questions about aircraft advertising at Hyderabad airport.", "_blank");
+    window.open("https://wa.me/919346148825?text=Hi! I have questions about aircraft advertising at Hyderabad airport.", "_blank");
   };
 
   return (

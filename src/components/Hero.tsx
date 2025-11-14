@@ -254,7 +254,7 @@ export const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            Premium Aircraft Advertising That Reaches Every Sky
+            India's First AI-Driven Traditional Marketing Company
           </motion.p>
           
           <motion.div

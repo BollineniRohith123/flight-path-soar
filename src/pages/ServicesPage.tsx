@@ -10,17 +10,23 @@ import {
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import exteriorWrapImage from "@/assets/exterior-aircraft-wrap-three-quarter.jpg";
 import interiorCabinImage from "@/assets/interior-aircraft-branding-wide-cabin.jpg";
 import airportGroundImage from "@/assets/airport-ground-operations-wide.jpg";
 import heroBackgroundImage from "@/assets/hero-aircraft-cinematic-golden-hour.jpg";
-import outdoorMediaImage from "@/assets/digital-led-billboards-night-dynamic.jpg";
-import transitBusImage from "@/assets/transit-bus-branding-side-profile.jpg";
-import digitalLedImage from "@/assets/digital-led-billboards-night-dynamic.jpg";
-import traditionalMediaImage from "@/assets/traditional-media-tv-studio-wide.jpg";
-import campaignManagementImage from "@/assets/campaign-management.jpg";
-import productionFacilityImage from "@/assets/production-facility-team-in-action.jpg";
+import outdoorMediaImage from "@/Images/Outdoor advertising.png";
+import transitBusImage from "@/Images/Transist and Transportation.png";
+import digitalLedImage from "@/Images/Digital and interactive.png";
+import traditionalMediaImage from "@/Images/Traditional Media.png";
+import campaignManagementImage from "@/Images/Campaigns management.png";
+import productionFacilityImage from "@/Images/Production support.png";
 import ctaBackgroundImage from "@/assets/integrated-advertising-hero-golden-hour.jpg";
+
+// Import all service images
+const allServiceImages = Object.values(import.meta.glob('/src/Images of services/*.jpeg', { eager: true })).map((mod: any) => mod.default);
+const serviceImages = allServiceImages.filter((_, index) => index !== 0 && index !== 2);
 
 const services = [
   {
@@ -67,7 +73,7 @@ const services = [
       "High Engagement & Recall",
       "Multiple Touchpoints Per Flight"
     ],
-    pricing: "Starting from ₹15 Lakhs/Month",
+    pricing: "Starting from ₹3 Lakhs/Month",
     image: interiorCabinImage,
   },
   {
@@ -349,6 +355,7 @@ const ServicesPage = () => {
                       src={category.image} 
                       alt={category.category}
                       className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                      style={{ objectFit: 'cover', aspectRatio: '16/9' }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
                     <div className="absolute bottom-4 left-4">
@@ -415,6 +422,35 @@ const ServicesPage = () => {
               </div>
             </Card>
           </motion.div>
+
+          {/* Services Gallery */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            className="mt-16"
+          >
+            <h3 className="text-2xl font-bold mb-6 text-center">Our Services in Action</h3>
+            <Carousel className="w-full max-w-5xl mx-auto" plugins={[Autoplay({ delay: 3000 })]}>
+              <CarouselContent>
+                {serviceImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1">
+                      <Card>
+                        <img
+                          src={image}
+                          alt={`Service ${index + 1}`}
+                          className="w-full h-64 object-cover rounded-lg"
+                        />
+                      </Card>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+          </motion.div>
         </div>
       </section>
 
@@ -438,7 +474,7 @@ const ServicesPage = () => {
                   Request Free Quote
                 </Button>
               </Link>
-              <a href="tel:+918019199995">
+              <a href="tel:+919346148825">
                 <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent border-white text-white hover:bg-white hover:text-primary">
                   Call Us Now
                 </Button>

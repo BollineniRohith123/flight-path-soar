@@ -22,7 +22,7 @@ const ContactPage = () => {
       secondary: "Direct Line",
       description: "Mon-Sat, 9 AM - 7 PM IST",
       action: "Call Now",
-      link: "tel:+918019199995"
+      link: "tel:+919346148825"
     },
     {
       icon: MessageCircle,
@@ -31,7 +31,7 @@ const ContactPage = () => {
       secondary: "Quick Response Guaranteed",
       description: "24/7 Instant Support",
       action: "Chat Now",
-      link: "https://wa.me/918019199995"
+      link: "https://wa.me/919346148825"
     },
     {
       icon: Mail,
@@ -317,13 +317,13 @@ const ContactPage = () => {
             Our team is available 24/7 for urgent campaign requirements
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+918019199995">
+            <a href="tel:+919346148825">
               <Button size="lg" variant="secondary" className="text-lg px-8">
                 <Phone className="w-5 h-5 mr-2" />
                 Emergency Hotline
               </Button>
             </a>
-            <a href="https://wa.me/918019199995">
+            <a href="https://wa.me/919346148825">
               <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent border-white text-white hover:bg-white hover:text-primary">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 WhatsApp Support

@@ -34,13 +34,13 @@ export const FixedCTABar = () => {
 
   const handleWhatsApp = () => {
     window.open(
-      "https://wa.me/918019199995?text=Hi! I'm interested in aircraft advertising with Skylar.",
+      "https://wa.me/919346148825?text=Hi! I'm interested in aircraft advertising with Skylar.",
       "_blank"
     );
   };
 
   const handleCallClick = () => {
-    window.location.href = "tel:+918019199995";
+    window.location.href = "tel:+919346148825";
   };
 
   return (

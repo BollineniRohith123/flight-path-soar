@@ -316,7 +316,7 @@ const WhySkylarPage = () => {
                   Get Free Quote
                 </button>
               </a>
-              <a href="tel:+918019199995">
+              <a href="tel:+919346148825">
                 <button className="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-primary transition-all">
                   Call Now
                 </button>
