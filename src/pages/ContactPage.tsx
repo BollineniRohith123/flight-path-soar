@@ -56,7 +56,7 @@ const ContactPage = () => {
   const offices = [
     {
       city: "Hyderabad (Head Office)",
-      address: "Plot No. 123, Jubilee Hills, Road No. 36,\nHyderabad, Telangana - 500033",
+      address: "#308, 3rd floor, 502B, Capital Pk Rd, VIP Hills,\nMadhapur, HITEC City, Hyderabad, Telangana 500081,\nHyderabad, Telangana, India - 500081",
       phone: "+91 80191 99995",
       email: "hyderabad@skylaradvertising.com",
       hours: "Mon-Sat: 9:00 AM - 7:00 PM",

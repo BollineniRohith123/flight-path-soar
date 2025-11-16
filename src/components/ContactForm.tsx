@@ -138,10 +138,10 @@ export const ContactForm = () => {
                     <SelectValue placeholder="Select range" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="50k-100k">$50K - $100K</SelectItem>
-                    <SelectItem value="100k-250k">$100K - $250K</SelectItem>
-                    <SelectItem value="250k-500k">$250K - $500K</SelectItem>
-                    <SelectItem value="500k+">$500K+</SelectItem>
+                    <SelectItem value="2.5l-5l">₹2.5L - ₹5L</SelectItem>
+                    <SelectItem value="5l-10l">₹5L - ₹10L</SelectItem>
+                    <SelectItem value="10l-25l">₹10L - ₹25L</SelectItem>
+                    <SelectItem value="25l+">₹25L+</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
