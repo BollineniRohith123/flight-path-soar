@@ -7,15 +7,15 @@ import { Button } from "@/components/ui/button";
 import exteriorWrapImage from "@/assets/indian-aircraft-hero-2.jpg";
 import interiorCabinImage from "@/assets/interior-aircraft-branding-wide-cabin.jpg";
 import airportGroundImage from "@/assets/airport-ground-operations-wide.jpg";
-import unipolesImage from "@/assets/digital-led-billboards-night-dynamic.jpg";
-import hoardingsImage from "@/assets/integrated-advertising-hero-golden-hour.jpg";
-import busBrandingImage from "@/assets/transit-bus-branding-side-profile.jpg";
-import metroAdImage from "@/assets/transit-bus-interior-ads.jpg";
-import ledBillboardsImage from "@/assets/digital-led-displays-urban.jpg";
-import interactiveKioskImage from "@/assets/urban-advertising-displays.jpg";
-import tvStudioImage from "@/assets/traditional-media-tv-studio-wide.jpg";
-import productionImage from "@/assets/large-format-printing-machine.jpg";
-import strategyImage from "@/assets/corporate-meeting-professional.jpg";
+import unipolesImage from "@/assets/outdoor-unipole-billboard-highway.jpg";
+import hoardingsImage from "@/assets/street-hoardings-banners-india.jpg";
+import busBrandingImage from "@/assets/bus-wrap-advertising-india.jpg";
+import metroAdImage from "@/assets/metro-platform-advertising-india.jpg";
+import ledBillboardsImage from "@/assets/led-digital-billboard-night-india.jpg";
+import interactiveKioskImage from "@/assets/interactive-digital-kiosk-mall.jpg";
+import tvStudioImage from "@/assets/tv-production-studio-india.jpg";
+import productionImage from "@/assets/production-printing-facility.jpg";
+import strategyImage from "@/assets/campaign-strategy-meeting.jpg";
 
 const services = [
 	{
