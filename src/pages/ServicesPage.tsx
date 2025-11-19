@@ -24,9 +24,27 @@ import campaignManagementImage from "@/Images/Campaigns management.png";
 import productionFacilityImage from "@/Images/Production support.png";
 import ctaBackgroundImage from "@/assets/integrated-advertising-hero-golden-hour.jpg";
 
-// Import all service images
-const allServiceImages = Object.values(import.meta.glob('/src/Images of services/*.jpeg', { eager: true })).map((mod: any) => mod.default);
-const serviceImages = allServiceImages.filter((_, index) => index !== 0 && index !== 2);
+// Import all service images from our real work
+import transitBranding1 from "@/assets/transit-branding-1.jpg";
+import aircraftInterior1 from "@/assets/aircraft-interior-branding-1.jpg";
+import busInterior1 from "@/assets/bus-interior-branding-1.jpg";
+import baggageCart1 from "@/assets/airport-baggage-cart-branding-1.jpg";
+import aircraftInterior2 from "@/assets/aircraft-interior-branding-2.jpg";
+import busInterior2 from "@/assets/bus-interior-branding-2.jpg";
+import baggageCart2 from "@/assets/airport-baggage-cart-branding-2.jpg";
+import busExterior1 from "@/assets/bus-exterior-branding-1.jpg";
+
+// Real advertising work showcase
+const serviceImages = [
+  transitBranding1,
+  aircraftInterior1,
+  busInterior1,
+  baggageCart1,
+  aircraftInterior2,
+  busInterior2,
+  baggageCart2,
+  busExterior1
+];
 
 const services = [
   {
@@ -431,16 +449,17 @@ const ServicesPage = () => {
             className="mt-16"
           >
             <h3 className="text-2xl font-bold mb-6 text-center">Our Services in Action</h3>
+            <p className="text-muted-foreground text-center mb-8">Real examples of our aircraft, transit, and airport advertising campaigns</p>
             <Carousel className="w-full max-w-5xl mx-auto" plugins={[Autoplay({ delay: 3000 })]}>
               <CarouselContent>
                 {serviceImages.map((image, index) => (
                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                     <div className="p-1">
-                      <Card>
+                      <Card className="overflow-hidden">
                         <img
                           src={image}
-                          alt={`Service ${index + 1}`}
-                          className="w-full h-64 object-cover rounded-lg"
+                          alt={`Real advertising campaign example ${index + 1}`}
+                          className="w-full h-64 object-cover rounded-lg hover:scale-105 transition-transform duration-300"
                         />
                       </Card>
                     </div>
