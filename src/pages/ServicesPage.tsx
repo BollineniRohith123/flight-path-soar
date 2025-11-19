@@ -33,6 +33,12 @@ import aircraftInterior2 from "@/assets/aircraft-interior-branding-2.jpg";
 import busInterior2 from "@/assets/bus-interior-branding-2.jpg";
 import baggageCart2 from "@/assets/airport-baggage-cart-branding-2.jpg";
 import busExterior1 from "@/assets/bus-exterior-branding-1.jpg";
+import aircraftCrewPromo1 from "@/assets/aircraft-crew-promo-card-1.jpg";
+import busInteriorAdHangers from "@/assets/bus-interior-ad-hangers.jpg";
+import aircraftCrewPromo2 from "@/assets/aircraft-crew-promo-card-2.jpg";
+import aircraftExteriorDanube from "@/assets/aircraft-exterior-danube-wrap.jpg";
+import aircraftOverheadLG1 from "@/assets/aircraft-overhead-lg-ad-1.jpg";
+import aircraftOverheadLG2 from "@/assets/aircraft-overhead-lg-ad-2.jpg";
 
 // Real advertising work showcase
 const serviceImages = [
@@ -43,7 +49,13 @@ const serviceImages = [
   aircraftInterior2,
   busInterior2,
   baggageCart2,
-  busExterior1
+  busExterior1,
+  aircraftCrewPromo1,
+  busInteriorAdHangers,
+  aircraftCrewPromo2,
+  aircraftExteriorDanube,
+  aircraftOverheadLG1,
+  aircraftOverheadLG2
 ];
 
 const services = [
