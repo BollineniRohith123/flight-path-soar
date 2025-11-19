@@ -45,13 +45,6 @@ const AboutPage = () => {
     { year: "2025", event: "Integrated Solutions Leader", description: "Positioned as a leading integrated advertising partner offering aircraft, outdoor, digital and traditional solutions with end-to-end performance tracking." },
   ];
 
-  const team = [
-    {
-      name: "Bala Krishna",
-      role: "Founder & CEO",
-      description: "Visionary leader with extensive experience in aviation marketing and outdoor advertising. Strategic expert driving innovation and excellence in aircraft advertising solutions.",
-    },
-  ];
 
   return (
     <div className="min-h-screen bg-background">
