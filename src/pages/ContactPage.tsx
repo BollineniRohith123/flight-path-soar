@@ -18,7 +18,7 @@ const ContactPage = () => {
     {
       icon: Phone,
       title: "Call Us",
-      primary: "+91 80191 99995",
+      primary: "+91 93461 48825",
       secondary: "Direct Line",
       description: "Mon-Sat, 9 AM - 7 PM IST",
       action: "Call Now",
@@ -27,7 +27,7 @@ const ContactPage = () => {
     {
       icon: MessageCircle,
       title: "WhatsApp",
-      primary: "+91 80191 99995",
+      primary: "+91 93461 48825",
       secondary: "Quick Response Guaranteed",
       description: "24/7 Instant Support",
       action: "Chat Now",
@@ -36,11 +36,11 @@ const ContactPage = () => {
     {
       icon: Mail,
       title: "Email Us",
-      primary: "contact@skylaradvertising.com",
-      secondary: "sales@skylaradvertising.com",
+      primary: "reach@theskylar.in",
+      secondary: "info@theskylar.in",
       description: "Response within 2 hours",
       action: "Send Email",
-      link: "mailto:contact@skylaradvertising.com"
+      link: "mailto:reach@theskylar.in"
     },
     {
       icon: Calendar,
@@ -57,16 +57,16 @@ const ContactPage = () => {
     {
       city: "Hyderabad (Head Office)",
       address: "#308, 3rd floor, 502B, Capital Pk Rd, VIP Hills,\nMadhapur, HITEC City, Hyderabad, Telangana 500081,\nHyderabad, Telangana, India - 500081",
-      phone: "+91 80191 99995",
-      email: "hyderabad@skylaradvertising.com",
+      phone: "+91 93461 48825",
+      email: "reach@theskylar.in",
       hours: "Mon-Sat: 9:00 AM - 7:00 PM",
       isMain: true
     },
     {
       city: "Airport Operations",
       address: "Rajiv Gandhi International Airport,\nShamshabad, Hyderabad - 500108",
-      phone: "+91 80191 99995",
-      email: "airport@skylaradvertising.com",
+      phone: "+91 93461 48825",
+      email: "airport@theskylar.in",
       hours: "24/7 Operations",
       isMain: false
     },

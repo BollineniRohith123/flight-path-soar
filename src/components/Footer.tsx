@@ -80,8 +80,8 @@ export const Footer = () => {
           <div>
             <h3 className="font-display font-bold text-lg mb-4">Get in Touch</h3>
             <ul className="space-y-2 text-white/70">
-              <li>contact@skylaradvertising.com</li>
-              <li>+91 80191 99995</li>
+              <li>reach@theskylar.in</li>
+              <li>+91 93461 48825</li>
               <li>#308, 3rd floor, 502B, Capital Pk Rd, VIP Hills, Madhapur, HITEC City, Hyderabad, Telangana 500081, India</li>
               <li>
                 <a href="#contact" className="text-accent hover:text-accent-glow transition-colors">
